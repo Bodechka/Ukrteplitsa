@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Укртеплица</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCPGLM7NVN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YCPGLM7NVN');
+    </script>
+    
+    <script>
+        if (!window._teletypeWidget) { 
+            window._teletypeWidget = window._teletypeWidget || {}; 
+            !function () { 
+                var t = document.getElementsByTagName("app-teletype-root"); 
+                if (t.length > 0 && _teletypeWidget.init) return; 
+                var d = new Date().getTime(); 
+                var n = document.createElement("script"), 
+                    c = document.getElementsByTagName("script")[0]; 
+                n.id = "teletype-widget-embed", 
+                n.src = "https://widget.teletype.app/init.js?_=" + d, 
+                n.async = !0, n.setAttribute("data-embed-version", "0.1"); 
+                c.parentNode.insertBefore(n, c); 
+            }(); 
+            document.addEventListener("teletype.ready", function () { 
+                console.log("Teletype ready") 
+            }); 
+            window.teletypeExternalId = "1CwXJAp0mCmW8vsZF4rMVfFcNpZrfRUFLyn0-Th0Tm2PfjfwZhRiWi_AUZ5_UysK"; 
+        }
+    </script>
+
+</head>
+<body>
+    <div class="wrapper main-page-wrapper">
+        <div class="header-wrap">
+            <header>
+                <nav class="navbar navbar-expand-lg p-0">
+                    <div class="navbar-brand logo-wrap" href="#">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="img/logo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <div class="title">УКРТЕПЛИЦА</div>
+                            <p>
+                                производство и продажа
+                                теплиц из поликарбоната
+                                по всей украине
+                            </p>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="about.html">о нас</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#section-teplitsa-type">каталог</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#section-our-works">наши работы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="delivery.html">доставка и оплата</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacts.html">контакты</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="tel:+380637349786">
+                                    <img src="img/tel-icon.png">
+                                    +38(063) 734-97-86
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <section class="section-slogan">
+            <div class="slogan-wrap">
+                <h1>
+                    Прочные теплицы из поликарбоната
+                    напрямую от завода<br>
+                    производителя с гарантией
+                </h1>
+                <p>
+                    Оставьте заявку и получите точный
+                    расчет стоимости Вашей теплицы
+                    от нашего эксперта за 5 минут
+                </p>
+
+                <div class="d-flex align-items-center flex-column slogan-contact">
+                    <div class="contact-tel slogan-contact-tel">
+                        <img src="img/ua-icon.png">
+                        <!-- <div class="contact-tel-toggler"></div> -->
+                        <div class="ua-code">+380</div>
+                        <input type="text" name="tel" id="tel1" class="tel-mask" placeholder="(99) 999-99-99" required>
+                    </div>
+                    <input type="button" value="получить точный расчет" class="send-tel" data-tel-input="tel1" data-success-id="success1" data-error-id="error1">
+                    <div class="contact-form-error text-danger" id="error1">Заполните поле</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-privilege">
+            <div class="d-flex justify-content-center">
+                <div class="privilege-box">
+                    <img src="img/icon-1.png">
+                    <p>Гарантия<br>10 лет</p>
+                </div>
+                <div class="privilege-box">
+                    <img src="img/icon-2.png">
+                    <p>Производим теплицы<br>с 2012 года</p>
+                </div>
+                <div class="privilege-box">
+                    <img src="img/icon-3.png">
+                    <p>100% наличие<br>на складе</p>
+                </div>
+            </div>
+
+            <div class="privilege-main">
+                <h2>Вот почему наши теплицы самые надежные</h2>
+
+                <div class="d-flex justify-content-between">
+                    <div class="privilege-main-left">
+                        <div class="privilege">
+                            <img src="img/privilege-1.png" alt="icon">
+                            <h3>поликарбонат Greenhouse nano</h3>
+                            <p>
+                                Увеличивает урожайность<br>
+                                до 48% и улучшает<br>
+                                вкусовые качества овощей
+                            </p>
+                        </div>
+                        <div class="privilege">
+                            <img src="img/privilege-2.png" alt="icon">
+                            <h3>Продольные усиление</h3>
+                            <p>
+                                Усиливают каркас и защищают
+                                поликарбонат от<br>
+                                продавливания снегом зимой
+                            </p>
+                        </div>
+                        <div class="privilege">
+                            <img src="img/privilege-3.png" alt="icon">
+                            <h3>прочная конструкция</h3>
+                            <p>
+                                Каркас теплицы способен
+                                выдерживает сильные перепады
+                                температур и нагрузку<br>
+                                до 180 кг/м2
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="privilege-main-right">
+                        <div class="w-100 d-flex justify-content-between">
+                            <div class="privilege">
+                                <img src="img/privilege-4.png" alt="icon">
+                                <h3>срок службы 20 лет</h3>
+                                <p>
+                                    Каркас выполен из
+                                    горячеоцинкованной стальной
+                                    трубы толщиной 20* 20 мм
+                                </p>
+                            </div>
+                            <div class="privilege">
+                                <img src="img/privilege-5.png" alt="icon">
+                                <h3>Арочная форма</h3>
+                                <p>
+                                    На крыше конструкции
+                                    не скапливается снег
+                                    и опавшие листья
+                                </p>
+                            </div>
+                            <div class="privilege">
+                                <img src="img/privilege-6.png" alt="icon">
+                                <h3>надежное крепление краб - системой</h3>
+                                <p>
+                                    В 4 раза прочнее сварки.
+                                    Дуги и стяжки лежат
+                                    строго в одной плоскости
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-100 teplitsa-frame">
+                            <img src="img/teplitsa-frame.png" class="w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="privilege-main-mobile">
+                <h2>Вот почему наши теплицы самые надежные</h2>
+
+                    <div>
+                        <div class="privilege">
+                            <img src="img/privilege-1.png" alt="icon">
+                            <h3>поликарбонат<br>Greenhouse nano</h3>
+                            <p>
+                                Увеличивает урожайность<br>
+                                до 48% и улучшает<br>
+                                вкусовые качества овощей
+                            </p>
+                        </div>
+                        <div class="privilege">
+                            <img src="img/privilege-4.png" alt="icon">
+                            <h3>срок службы 20 лет</h3>
+                            <p>
+                                Каркас выполен из
+                                горячеоцинкованной стальной
+                                трубы толщиной 20* 20 мм
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="privilege">
+                            <img src="img/privilege-6.png" alt="icon">
+                            <h3>надежное крепление</h3>
+                            <p>
+                                В 4 раза прочнее сварки.
+                                Дуги и стяжки лежат
+                                строго в одной плоскости
+                            </p>
+                        </div>
+                        <div class="privilege">
+                            <img src="img/privilege-5.png" alt="icon">
+                            <h3>Арочная форма</h3>
+                            <p>
+                                На крыше конструкции
+                                не скапливается снег
+                                и опавшие листья
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="privilege">
+                            <img src="img/privilege-2.png" alt="icon">
+                            <h3>Продольные усиление</h3>
+                            <p>
+                                Усиливают каркас и защищают
+                                поликарбонат от<br>
+                                продавливания снегом зимой
+                            </p>
+                        </div>
+                        <div class="privilege">
+                            <img src="img/privilege-3.png" alt="icon">
+                            <h3>прочная конструкция</h3>
+                            <p>
+                                Каркас теплицы способен
+                                выдерживает сильные перепады
+                                температур и нагрузку<br>
+                                до 180 кг/м2
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-100 teplitsa-frame">
+                        <img src="img/teplitsa-frame.png" class="w-100">
+                    </div>
+            </div>
+        </section>
+
+        <section class="section-teplitsa-type" id="section-teplitsa-type">
+            <div class="teplitsa-type-content">
+                <h2>
+                    20 видов теплиц из поликарбоната<br>
+                    в наличии на складе в Киеве
+                </h2>
+                <div class="d-flex flex-wrap justify-content-between">
+                    <div class="teplitsa-box">
+                        <img src="img/teplitsa1.png" alt="teplitsa">
+                        <h3>Теплица "Люкс-3"</h3>
+                        <div class="details-link">
+                            <a href="lux_3m.html">подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="teplitsa-box">
+                        <img src="img/teplitsa2.png" alt="teplitsa">
+                        <h3>Теплица "люкс-4"</h3>
+                        <div class="details-link">
+                            <a href="lux_4m.html">подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="teplitsa-box">
+                        <img src="img/teplitsa3.png" alt="teplitsa">
+                        <h3>Теплица "весенняя"</h3>
+                        <div class="details-link">
+                            <a href="vesenyaya.html">подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="teplitsa-box">
+                        <img src="img/teplitsa4.png" alt="teplitsa">
+                        <h3>Теплица "норд"</h3>
+                        <div class="details-link">
+                            <a href="nord.html">подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="teplitsa-box">
+                        <img src="img/teplitsa5.png" alt="teplitsa">
+                        <h3>Теплица "стодола"</h3>
+                        <div class="details-link">
+                            <a href="stodola.html">подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="teplitsa-box">
+                        <img src="img/teplitsa6.png" alt="teplitsa">
+                        <h3>Теплица "сити"</h3>
+                        <div class="details-link">
+                            <a href="city.html">подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="leaves1" src="img/leaves1.png">
+            <img class="leaves2" src="img/leaves2.png">
+        </section>
+
+        <section class="section-cost-calc">
+            <div class="cost-calc-content">
+                <h2>Получите расчет стоимости теплицы</h2>
+                <p>
+                    Оставьте заявку, наш эксперт свяжется с Вами в течении 15 минут<br>
+                    и поможет подобрать теплицу под ваши пожелания<br>
+                    по самым выгодным условиям на рынке
+                </p>
+
+                <div class="d-flex w-100 justify-content-center">
+                    <div class="contact-tel">
+                        <img src="img/ua-icon.png">
+                        <div class="ua-code">+380</div>
+                        <input type="text" name="tel" id="tel2" class="tel-mask" placeholder="(99) 999-99-99">
+                    </div>
+                    <div class="contact-link">
+                        <input type="button" value="подобрать теплицу" class="send-tel" data-tel-input="tel2" data-success-id="success2" data-error-id="error2">
+                    </div>
+                </div>
+                <div class="contact-form-error text-danger" id="error2">Заполните поле</div>
+            </div>
+            <img class="leaves3" src="img/leaves3.png">
+            <img class="leaves4" src="img/leaves4.png">
+        </section>
+
+        <section class="section-our-works" id="section-our-works">
+            <div class="our-works-content">
+                <h2>Наши работы</h2>
+                <div class="slider-container">
+                    <div class="main-slider">
+                        <div class="teplitsa-slide">
+                            <img src="img/slider_pics/main-slide-1.png" alt="">
+                        </div>
+                        <div class="teplitsa-slide">
+                            <img src="img/slider_pics/main-slide-2.png" alt="">
+                        </div>
+                        <div class="teplitsa-slide">
+                            <img src="img/slider_pics/main-slide-3.png" alt="">
+                        </div>
+                        <div class="teplitsa-slide">
+                            <img src="img/slider_pics/main-slide-4.png" alt="">
+                        </div>
+                        <div class="teplitsa-slide">
+                            <img src="img/slider_pics/main-slide-5.png" alt="">
+                        </div>
+                        <div class="teplitsa-slide">
+                            <img src="img/slider_pics/main-slide-6.png" alt="">
+                        </div>
+                        <div class="teplitsa-slide">
+                            <img src="img/slider_pics/main-slide-7.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-wrap">
+                    <h2>Ответы на часто задаваемые вопросы</h2>
+                    <div class="faq">
+                        <div class="accordion accordion-flush" id="faq-accordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading-1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1"
+                                        aria-expanded="true" aria-controls="collapse-1">
+                                        Даете ли вы гарантию на теплицы?
+                                    </button>
+                                    <span></span>
+                                </h3>
+                                <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="heading-1" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        Мы даем гарантию на каждую конструкцию и
+                                        все конструктивные элементы - 10 лет!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading-2">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2"
+                                        aria-expanded="true" aria-controls="collapse-2">
+                                        Какой толщины должен быть поликарбонат?
+                                    </button>
+                                    <span></span>
+                                </h3>
+                                <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        В качестве покрывного материала мы используем
+                                        сотовый (ячеистый) поликарбонат с толщиной
+                                        листа 4, 6, 8 и 10 мм. Оптимальная толщина
+                                        поликарбоната для теплиц длиной до 6 метров - 4-6мм.
+                                        Теплицы более 6 метров рекомендуем покрывать
+                                        поликарбонатом толщиной от 6мм.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading-3">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3"
+                                        aria-expanded="true" aria-controls="collapse-3">
+                                        Какие снеговые нагрузки  выдерживает теплица?
+                                    </button>
+                                    <span></span>
+                                </h3>
+                                <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        Крыша всех теплиц изготовлена в форме арки. 
+                                        Это сделано для того, чтобы снег 
+                                        самопроизвольно скатывался с крыши конструкции. 
+                                        Наши теплицы комплектуются цельной профильной 
+                                        трубой размером от 20х20 мм., а также "Х" и "Т" - 
+                                        образными крепежами, которые значительно усиливают 
+                                        прочность каркаса в местах соединения профиля, тем 
+                                        самым не дают прогнутся в местах соединения каркаса 
+                                        и выдерживают снеговую нагрузку до 190-230 кг/м2. 
+                                        Это примерно толщина рыхлого снега 40-55 см.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading-4">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4"
+                                        aria-expanded="true" aria-controls="collapse-4">
+                                        Изготавливаете ли вы теплицы нестандартных размеров?
+                                    </button>
+                                    <span></span>
+                                </h3>
+                                <div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        Да, мы можем изготовить практически любые 
+                                        теплицы из сотового поликарбоната. Для более 
+                                        точного ответа оставьте заявку или позвоните 
+                                        по номеру: +380637349786.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading-5">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5"
+                                        aria-expanded="true" aria-controls="collapse-5">
+                                        Установка и сборка теплицы из поликарбоната это просто?
+                                    </button>
+                                    <span></span>
+                                </h3>
+                                <div id="collapse-5" class="accordion-collapse collapse" aria-labelledby="heading-5" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        Если Вы без опыта хотите собрать теплицу сами, 
+                                        то не тешьте себя надеждами собрать её за 2-3 часа. 
+                                        Скорее всего это займет у Вас не меньше дня. 
+                                        Опытные специалисты с сотнями установленных 
+                                        теплиц за плечами затрачивают от 4 до 6 часов 
+                                        на сборку. Все кто говорит, что мы собираем 
+                                        теплицу за час – два, потом будут оправдываться, 
+                                        что это у производителя теплицы был брак, или 
+                                        поликарбонат ложится неровно из-за того, что у 
+                                        Вас участок неровный. Не попадайтесь на такие уловки.
+                                        <br><br>
+                                        Также, Вы можете установить самостоятельно с 
+                                        помощью инструкции, которая идет в комплекте с 
+                                        каждой теплицей. Однако, важно учитывать что даже 
+                                        одна ошибка может привести к тому, что в дальнейшем 
+                                        могут нарушиться качественные и эксплуатационные 
+                                        характеристики тепличной конструкции. Если Вы 
+                                        хотите быть абсолютно уверенным в долговечной 
+                                        и исправной эксплуатации сооружения – доверьте 
+                                        установку и сборку теплицы специалистам нашей компании.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading-6">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6"
+                                        aria-expanded="true" aria-controls="collapse-6">
+                                        Что входит в комплект?
+                                    </button>
+                                    <span></span>
+                                </h3>
+                                <div id="collapse-6" class="accordion-collapse collapse" aria-labelledby="heading-6" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        В комплект входит:<br>
+                                        - крепеж для поликарбоната;<br>
+                                        - крепежные системы для каркаса;<br>
+                                        - якоря для закрепления теплицы в почве;<br>
+                                        - "П" - образные планки для защиты торцов поликарбоната;<br>
+                                        - фурнитура;<br>
+                                        - поликарбонат;<br>
+                                        - инструкция.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading-7">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-7"
+                                        aria-expanded="true" aria-controls="collapse-7">
+                                        Нужно ли устанавливать теплицу на фундамент?
+                                    </button>
+                                    <span></span>
+                                </h3>
+                                <div id="collapse-7" class="accordion-collapse collapse" aria-labelledby="heading-7" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        Предлагаемые нами каркасы теплиц под поликарбонат 
+                                        можно устанавливать двумя способами: на грунт и на фундамент.
+                                        <br><br>
+                                        При установке на грунт мы используем якоря, 
+                                        которые монтируем по периметру основания 
+                                        теплицы и вкапываем их на 30 см. в землю. 
+                                        На грунт мы рекомендуем устанавливать теплицы 
+                                        длиной до 6-8 метров.
+                                        <br><br>
+                                        Если Ваша теплица более 8 метров в длину, 
+                                        рекомендуем установку на фундамент. Фундамент 
+                                        может быть бетонный, деревянный или металлический.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading-8">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-8"
+                                        aria-expanded="true" aria-controls="collapse-8">
+                                        Можно ли заказать отдельно каркас или поликарбонат?
+                                    </button>
+                                    <span></span>
+                                </h3>
+                                <div id="collapse-8" class="accordion-collapse collapse" aria-labelledby="heading-8" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        Да. Мы предлагаем как готовые теплицы с полным 
+                                        комплектом, так и отдельно каркас и отдельно 
+                                        поликарбонат. Для того, чтобы получить просчет 
+                                        по Вашим пожеланиям оставьте заявку или позвоните нам.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-wrap">
+            <footer>
+                <div class="d-flex justify-content-between">
+                    <div class="logo-wrap">
+                        <a href="#" class="logo">
+                            <img src="img/footer-logo.png" alt="">
+                        </a>
+                        <div class="d-flex flex-column">
+                            <div class="title">УКРТЕПЛИЦА</div>
+                            <p>
+                                производство и продажа<br>
+                                теплиц из поликарбоната<br>
+                                по всей украине
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contacts-wrap">
+                        <h3>Контакты</h3>
+                        <p>ОФИС: УКРАИНА, КИЕВ, БУЛЬВАР ВЕРХОВНОЙ РАДЫ, 34</p>
+                        <p>СКЛАД: УКРАИНА, КИЕВ, УЛИЦА МАГНИТОГОРСКАЯ, 1</p>
+                        <div class="contact-link">
+                            <a href="tel:+380637349786">+38(063)734-97-86</a>
+                        </div>
+                        <div class="contact-link">
+                            <a href="tel:+380937851993">+38(093)785-19-93</a>
+                        </div>
+                        <div class="contact-link">
+                            <a href="mailto:ukrteplica@gmail.com">ukrteplica@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-wrap">
+                        <h3>Информация</h3>
+                        <ul>
+                            <li>
+                                <a href="index.html">Акции</a>
+                            </li>
+                            <li>
+                                <a href="#section-our-works">Наши работы</a>
+                            </li>
+                            <li>
+                                <a href="delivery.html">Доставка и оплата</a>
+                            </li>
+                            <li>
+                                <a href="for_dealers.html">Диллерам</a>
+                            </li>
+                            <li>
+                                <a href="index.html">Вакансии</a>
+                            </li>
+                        </ul>
+                    </div>    
+                </div>
+                <div class="footer-text">
+                    Укртеплица - прочные теплицы из поликарбоната
+                    собственного производства с гарантией 10 лет
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="slider_config.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,3930 @@
+@import "fonts";
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat-Regular";
+    letter-spacing: 0.08em;
+    color: #4c4e49;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: #000;
+    font-family: "Montserrat-Bold";
+}
+
+p, ul, h1, h2, h3{
+    margin-bottom: 0;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+input[type="button"]{
+    border: none;
+    outline: none;
+    font-family: "Montserrat-Bold";
+}
+
+.contact-form-error, .dealer-form-error{
+    display: none;
+    padding: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+// .contact-form-success{
+//     display: none;
+//     padding: 10px 0;
+//     font-size: 20px;
+//     text-align: center;
+// }
+
+.order-form-error{
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 36%;
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media(max-width: 1600px){
+    .contact-form-error, .dealer-form-error{
+        font-size: 16px;
+    }
+
+    .order-form-error{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 576px){
+    .contact-form-error, .dealer-form-error{
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
+    .order-form-error{
+        position: static;
+        font-size: 12px;
+        padding: 10px 0;
+    }
+}
+
+@media(max-width: 360px){
+    .contact-form-error, .dealer-form-error{
+        font-size: 11px;
+    }
+
+    .order-form-error{
+        font-size: 11px;
+    }
+}
+
+.slick-slide{
+    outline: none
+}
+
+@mixin center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin vertical-center{
+    display: flex;
+    align-items: center;
+}
+
+@mixin horizontal-center{
+    display: flex;
+    justify-content: center;
+}
+
+.d-flex{
+    display: flex !important;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.wrapper{
+    position: relative;
+
+    .back{
+        position: absolute;
+    }
+
+    .slogan-back, .teplitsa-page-back{
+        top: 0;
+        z-index: -10;
+    }
+
+    
+
+    .logo-wrap{
+        display: flex;
+
+        .logo{
+            margin-right: 16px;
+            margin-top: 5px;
+
+            a{
+                display: block;
+            }
+
+            
+        }
+
+        .title{
+            font-family: "Montserrat-Bold";
+            font-size: 22px;
+            text-transform: uppercase;
+            color: #5cac00;
+            margin-bottom: 5px;
+        }
+
+        p{
+            font-family: "Montserrat-Medium";
+            text-transform: uppercase;
+            font-size: 17.8px;
+            line-height: 1.4;
+            color: #010101;
+        }
+    }
+
+    .contact-tel{
+        display: flex;
+        overflow: hidden;
+        position: relative;
+
+        img{
+            width: 7%;
+            position: absolute;
+            top: 50%;
+            left: 13.6%;
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+
+        .ua-code{
+            position: absolute;
+            height: 100%;
+            @include vertical-center();
+            font-size: 22px;
+            left: 25%;
+        }
+
+        .tel-mask{
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: none;
+            padding-left: 41%;
+            padding-right: 0;
+            font-size: 22px;
+            outline: none;
+        }
+    }
+}
+
+.main-page-wrapper{
+    background: url(../img/slogan-back.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.teplitsa-page-wrapper{
+    background: url(../img/teplitsa-page-back.png) no-repeat;
+    background-size: 100%;
+}
+
+.delivery-page-wrapper{
+    background: url(../img/delivery-page-back.png) no-repeat;
+    background-size: 100%;
+}
+
+.contacts-page-wrapper{
+    background: url(../img/dealers-page-back.png) no-repeat;
+    background-size: 100%;
+}
+
+.for-dealers-page-wrapper{
+    background: url(../img/dealers-page-back.png) no-repeat;
+    background-size: 100%;
+}
+
+.header-wrap{
+
+    header{
+        padding: 3.6% 5.5% 0 6%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .navbar{
+            width: 100%;
+
+            .logo-wrap{
+                width: 26.5%;
+                padding: 0;
+                margin-right: 0;
+                white-space: normal;
+
+                div:last-child{
+                    width: auto;
+                }
+            }
+
+            button{
+
+                box-shadow: none;
+
+                .navbar-toggler-icon{
+                    background: url(../img/nav-toggler.png) center center no-repeat;
+                }
+            }
+
+            .navbar-collapse{
+
+                ul{
+                    margin-left: auto;
+
+                    .nav-item{
+                        margin-left: 40px;
+                        @include vertical-center();
+    
+                        .nav-link, a{
+                            font-family: "Montserrat-Bold";
+                            text-transform: uppercase;
+                            color: #010101;
+                            font-size: 18px;
+                            padding: 0;
+                        }
+                    }
+    
+                    .nav-item:first-child{
+                        margin-left: 0;
+                    }
+    
+                    .nav-item:last-child{
+                        margin-left: 60px;
+    
+                        img{
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+section{
+    width: 100%;
+
+    h2{
+        text-align: center;
+        font-family: "Montserrat-Bold";
+        font-size: 40px;
+        text-transform: uppercase;
+        line-height: 1.1;
+    }
+
+    .table-wrap{
+        width: 100%;
+        border: 1px solid #96b24a;
+        border-radius: 30px;
+        overflow: hidden;
+        margin-bottom: 28px;
+    
+        table{
+            width: calc(100% + 1px);
+    
+            tr:first-child{
+                background-color: #96b24a;
+            }
+    
+            tr{
+                height: 50px;
+                background-color: #f4f7d6;
+    
+                th, td{
+                    font-family: "Montserrat-Bold";
+                    font-size: 22px;
+                    text-align: center;
+                }
+    
+                th{
+                    color: #fff;
+                }
+    
+                td{
+                    color: #96b24a;
+                    border: 1px solid #96b24a;
+    
+                    &:first-child{
+                        border-left: none;
+                    }
+    
+                    &:last-child{
+                        border-right: none;
+                    }
+                }
+    
+                &:last-child td{
+                    border-bottom: none;
+                }
+            } 
+        }
+
+        .first-table{
+            tr td:first-child{
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.section-slogan{
+    padding-left: 12%;
+    margin-top: 140px;
+    position: relative;
+
+    .slogan-wrap{
+        width: 55%;
+
+        h1{
+            font-family: "Montserrat-Bold";
+            font-size: 35px;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        p{
+            margin: 50px 0;
+            width: 56%;
+            font-size: 24px;
+            line-height: 1.6;
+        }
+
+        .slogan-contact{
+            width: 53.2%;
+
+            .slogan-contact-tel{
+                width: 75%;
+                height: 70px;
+                border: 2px solid #4e504b;
+                border-radius: 6.8%/34.3%;
+                margin-bottom: 27px;
+
+                img{
+                    width: 7.7%;
+                    left: 12.3%;
+                }
+
+                .ua-code{
+                    left: 25%;
+                    font-size: 18px;
+                }
+
+                .tel-mask{
+                    font-size: 18px;
+                }
+            }
+
+            .send-tel{
+                width: 100%;
+                height: 80px;
+                background-color: #d2732c;
+                border-radius: 4.8%/34.3%;
+                @include center();
+                font-size: 22px;
+                text-transform: uppercase;
+                color: #fff;
+                box-shadow: 3px 7px 10px 1px rgba(103, 96, 94, .36), inset 0 0 13px 2px rgba(255, 255, 255, .51);
+            }
+
+
+
+
+        }
+    }
+}
+
+.section-privilege{
+    padding: 420px 9.8% 0 9.8%;
+
+    .privilege-box{
+        text-align: center;
+        width: 22.7%;
+        height: 245px;
+        margin-right: 4.4%;
+        background-color: #f3f7df;
+        border-radius: 30px;
+        box-shadow: 0 7px 35px 14px rgba(103, 96, 94, .36);
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        img{
+            width: 28.5%;
+            margin-top: 35px;
+        }
+
+        p{
+            margin-top: 22px;
+            text-align: center;
+            font-family: "Montserrat-ExtraBold";
+            font-size: 18.4px;
+            text-transform: uppercase;
+            color: #317e00;
+            line-height: 1.3;
+        }
+    }
+
+    .privilege-main{
+
+        h2{
+            margin: 115px 0 125px;
+        }
+
+        .privilege{
+            h3{
+                font-family: "Montserrat-ExtraBold";
+                font-size: 17.2px;
+                text-transform: uppercase;
+                color: #317e00;
+                margin-bottom: 10px;
+            }
+
+            p{
+                font-size: 18.8px;
+                line-height: 1.6;
+            }
+
+            img{
+                margin-bottom: 25px;
+            }
+        }
+
+        .privilege-main-left{
+            width: 27.5%;
+
+            .privilege{
+                width: 100%;
+                margin-bottom: 60px;
+            }
+        }
+
+        .privilege-main-right{
+            width: 69.3%;
+
+            .privilege{
+                
+                &:nth-child(1){
+                    width: 34.2%;
+                }
+
+                &:nth-child(2){
+                    width: 25.8%;
+                }
+
+                &:nth-child(3){
+                    width: 28.1%;
+                }
+            }
+
+            .teplitsa-frame{
+                margin-top: 100px;
+            }
+        }
+    }
+
+    .privilege-main-mobile{
+        display: none;
+    }
+}
+
+.section-teplitsa-type{
+    position: relative;
+    padding: 0 9.8% 120px 9.8%;
+
+    .leaves1{
+        width: 19.4%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .leaves2{
+        width: 14.6%;
+        position: absolute;
+        top: 15%;
+        right: 0;
+        z-index: 1;
+    }
+
+    .teplitsa-type-content{
+        
+        h2{
+            padding: 150px 0 135px;
+        }
+    }
+
+    .teplitsa-box{
+        width: 30.5%;
+        padding: 4.58% 4.3%;
+        margin-bottom: 55px;
+        border-radius: 14.9%/11.1%;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 7px 35px 14px rgba(103, 96, 94, .36);
+
+        img{
+            width: 100%;
+        }
+
+        h3{
+            font-family: "Montserrat-Bold";
+            font-size: 23.2px;
+            text-transform: uppercase;
+            line-height: .9;
+            margin: 50px 0 25px;
+        }
+
+        .details-link{
+            width: 100%;
+            height: 55px;
+            border-radius: 5.1%/32.7%;
+            overflow: hidden;
+
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                background-color: #8bb337;
+                font-size: 18.6px;
+                text-transform: uppercase;
+                color: #fff;
+            }
+        }
+        
+    }
+}
+
+.section-cost-calc{
+    display: flex;
+    justify-content: center;
+    background: url(../img/cost-calc-back.png) center top no-repeat;
+    background-size: cover;
+    padding-bottom: 105px;
+    position: relative;
+
+    .leaves3{
+        width: 15.1%;
+        position: absolute;
+        top: 31.5%;
+        left: 0;
+        z-index: 1;
+    }
+
+    .leaves4{
+        width: 24.2%;
+        position: absolute;
+        top: -22%;
+        right: .7%;
+        z-index: 1;
+    }
+
+    .leaves5{
+        width: 11.25%;
+        position: absolute;
+        top: -83%;
+        right: 0;
+    }
+
+    .cost-calc-content{
+        width: 65.1%;
+        z-index: 10;
+
+        h2{
+            margin: 135px 0 75px;
+            color: #fff;
+        }
+
+        p{
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 85px;
+            color: #fff;
+            line-height: 1.3;
+        }
+
+        .contact-tel{
+            width: 34%;
+            height: 75px;
+            border-radius: 5.9%/33.3%;
+            background-color: #fff;
+        }
+
+        .contact-link{
+            width: 30.4%;
+            height: 75px;
+            margin-left: 1.5%;
+            border-radius: 5.9%/33.3%;
+            overflow: hidden;
+            box-shadow: 0 7px 35px 14px rgba(103, 96, 94, .36);
+
+            .send-tel, .send-dealer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                font-size: 18.6px;
+                text-transform: uppercase;
+                background-color: #8bb337;
+                color: #fff;
+                font-family: "Montserrat-Bold";
+            }
+        }
+    }
+}
+
+.section-our-works{
+
+    background: url(../img/works-back.png) center bottom no-repeat;
+    background-size: cover;
+
+    .our-works-content{
+        
+        >h2{
+            font-size: 35px;
+            padding: 110px 0 105px;
+        }
+
+        .slider-container{
+            width: 88.54%;
+            margin: 0 auto;
+            padding: 60px 0;
+            background-color: #fff;
+            box-shadow: 0 7px 35px 14px rgba(103, 96, 94, .36);
+            border-radius: 30px;
+        }
+
+        .main-slider{
+            padding: 0 7.1%;
+            position: relative;
+
+            .slick-track{
+                @include vertical-center();
+            }
+
+            .teplitsa-slide{
+                
+                @include center();
+
+                img{
+                    width: 97%;
+                }
+            }
+
+            .control{
+                position: absolute;
+                width: 3.5%;
+                height: 100%;
+                top: 0;
+                @include center();
+
+                img{
+                    width: 45%;
+                }
+            }
+
+            .prev{
+                left: 2%;
+            }
+
+            .next{
+                right: 2%;
+            }
+        }
+
+        .faq-wrap{
+            width: 64%;
+            margin: 0 auto;
+            padding-bottom: 150px;
+
+            h2{
+                margin: 100px 0 90px;
+                color: #8bb337;
+            }
+
+            .faq{
+                width: 100%;
+            }
+
+            .accordion{
+
+                .accordion-item{
+                    overflow: hidden;
+                    background-color: #fff;
+                    border-radius: 25px;
+                    box-shadow: 0 7px 35px 14px rgba(103, 96, 94, .2);
+                    margin-bottom: 20px;
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+
+                .accordion-header{
+                    position: relative;
+                }
+
+                .accordion-header span{
+                    display: flex;
+                    position: absolute;
+                    top: 50%;
+                    right: 3.2%;
+                    transform: translateY(-50%);
+                    width: 20px;
+                    height: 20px;
+                }
+
+                .accordion-header span::before, .accordion-header span::after{
+                    content: "";
+                    position: absolute;
+                    display: flex;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                    height: 1px;
+                    background-color: #8bb337;
+                }
+
+                .accordion-header span::after{
+                    left: 0;
+                    transform: rotate(90deg);
+                }
+
+                .accordion-button{
+                    font-size: 22px;
+                    text-transform: uppercase;
+                    padding: 25px 6.1%;
+                    background-color: transparent;
+                }
+
+                .accordion-button:not(.collapsed), .accordion-button:focus{
+                    color: #4c4e49;
+                    background-color: transparent;
+                    box-shadow: none;
+                }
+
+                .accordion-button::after{
+                    display: none;
+                }
+
+                .accordion-body{
+                    font-family: "Montserrat-Regular";
+                    padding: 0 6.1% 2rem;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+.footer-wrap{
+
+    background: url(../img/footer-back.png) center top no-repeat;
+    background-size: cover;
+
+    footer{
+        width: 67.1%;
+        margin: 0 auto;
+        padding: 92px 0 65px;
+
+        .logo-wrap{
+            width: 34.8%;
+            
+            .title{
+                color: #fff;
+            }
+            
+            p{
+                color: #fff;
+            }
+        }
+
+        h3{
+            font-family: "Montserrat-Bold";
+            font-size: 25px;
+            text-transform: uppercase;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .contacts-wrap{
+            width: 29.1%;
+
+
+            p{
+                font-family: "Montserrat-Medium";
+                font-size: 18px;
+                text-transform: uppercase;
+                color: #fff;
+                margin-bottom: 15px;
+            }
+
+            .contact-link{
+
+                a{
+                    font-family: "Montserrat-Medium";
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+
+                &:nth-child(3){
+                    margin-bottom: 7px;
+                }
+
+                &:last-child{
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .info-wrap{
+            width: 19.3%;
+
+            ul li{
+                margin-bottom: 14px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                
+                a{
+                    font-family: "Montserrat-Medium";
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+            }
+        }
+
+        .footer-text{
+            font-family: "Montserrat-Bold";
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 45px;
+        }
+    }
+}
+
+
+//---------TEPLITSA PAGES-----------
+
+.section-teplitsa{
+    padding: 80px 5.5% 100px 6%;
+
+    .teplitsa-slider-wrap{
+        width: 32.4%;
+
+        h1{
+            font-size: 30px;
+            font-family: "Montserrat-Bold";
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1;
+            letter-spacing: .12em;
+            margin-bottom: 65px;
+        }
+
+        .teplitsa-slider-container{
+            width: 100%;
+            padding: 10% 0;
+            background-color: #fff;
+            box-shadow: 0 7px 35px 14px rgba(103, 96, 94, .2);
+            border-radius: 50px;
+        }
+
+        .teplitsa-slider{
+            position: relative;
+            padding: 0 10%;
+
+            .slick-track{
+                @include vertical-center();
+            }
+
+            .teplitsa-slide{
+                
+                @include center();
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .control{
+                position: absolute;
+                width: 7.5%;
+                height: 100%;
+                top: 0;
+                @include center();
+
+                img{
+                    width: 45%;
+                }
+            }
+
+            .prev{
+                left: 2%;
+            }
+
+            .next{
+                right: 2%;
+            }
+        }
+
+        .teplitsa-slider-nav{
+            padding: 0 10%;
+            margin-top: 35px;
+
+            .slick-track{
+                @include vertical-center();
+            }
+
+            .teplitsa-slide{
+                outline: none;
+                
+                @include center();
+
+                img{
+                    width: 97%;
+                }
+            }
+        }
+
+    }
+
+    .table-wrap{
+
+        table{
+
+            tr td:first-child, tr th:first-child{
+                width: 37.8%;
+            }
+        }
+    }
+
+    .teplitsa-info-wrap{
+        width: 63.4%;
+
+        p{
+            width: 90%;
+            font-size: 24px;
+            line-height: 1.6;
+        }
+
+        .price-contact{
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            height: 60px;
+            margin: 40px 0;
+
+            .price{
+                width: 24.9%;
+                height: 100%;
+                background-color: #e1e9b2;
+                border-radius: 18px;
+                border: 3px solid #96b24a;
+                font-family: "Montserrat-Bold";
+                font-size: 21px;
+                color: #96b24a;
+                text-transform: uppercase;
+                @include center();
+            }
+
+            .contact-tel{
+                width: 33.2%;
+                height: 100%;
+                background-color: #f4f7d6;
+                border-radius: 18px;
+                border: 3px solid #96b24a;
+
+                img{
+                    width: 7.5%;
+                    left: 13%;
+                }
+
+                .contact-tel-toggler{
+                    left: 22%;
+                }
+
+                .ua-code{
+                    font-size: 18px;
+                }
+
+                .tel-mask{
+                    font-size: 18px;
+                }
+            }
+            
+            .send-order{
+                width: 33.6%;
+                height: 100%;
+                background-color: #d2732c;
+                border-radius: 18px;
+                @include center();
+                font-size: 21px;
+                text-transform: uppercase;
+                color: #fff;
+                box-shadow: 3px 7px 10px 1px rgba(103, 96, 94, .36), inset 0 0 15px 4px rgba(255, 255, 255, .6);
+            }
+
+        }
+
+        .table-wrap{
+            table{
+                .selected-price:hover{
+                    cursor: pointer;
+                    background-color: #dee3ae;
+                }
+            }
+        }
+
+        .tabs-wrap{
+            width: 100%;
+            position: relative;
+            padding-top: 55px;
+            
+            input[type="radio"] {
+                display: none;
+            }
+
+            .content{
+                display: none;
+                font-size: 16px;
+                border-bottom-left-radius: 22px 18px;
+                border-bottom-right-radius: 22px 18px;
+
+
+                span{
+                    font-family: "Montserrat-Bold";
+                }
+            }
+
+            #tab-btn-1:checked~#content-1,
+            #tab-btn-2:checked~#content-2{
+                display: block;
+                background-color: #f4f7d6;
+                padding: 35px 5.5%;
+                line-height: 1.9;
+            }
+
+            #tab-btn-2:checked~#content-2{
+                padding: 25px 3% 25px 4%;
+            }
+
+            .list{
+                display: flex;
+
+                ul{
+                    width: 50%;
+
+                    &:first-child{
+                        padding-right: 30px;
+                    }
+                }
+            }
+            
+
+            label{
+                position: absolute;
+                width: 50%;
+                height: 55px;
+                @include center();
+                user-select: none;
+                background-color: #96b24a;
+                font-family: "Montserrat-Bold";
+                font-size: 21px;
+                color: #fff;
+                border-top-left-radius: 22px 18px;
+                border-top-right-radius: 22px 18px;
+                transition: color 0.2s ease-in-out, background-color 0.15s ease-in-out;
+                cursor: pointer;
+                top: 1px;
+            }
+
+            #tab-btn-1+label{
+                top: 0;
+                left: 0;
+            }
+
+            #tab-btn-2+label{
+                top: 0;
+                right: 0;
+            }
+
+            label:not(:first-of-type){
+                border-left: none;
+            }
+
+            input[type="radio"]:checked+label{
+                border: 2px solid #f4f7d6;
+                border-bottom: none;
+            }
+        }
+    }
+
+    .teplitsa-privilege-wrap{
+
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 75px;
+
+        .privilege-box{
+            text-align: center;
+            width: 18.2%;
+            height: 220px;
+            background-color: #f3f7df;
+            border-radius: 18px;
+            box-shadow: 0 7px 35px 14px rgba(103, 96, 94, .36);
+
+            &:last-child{
+                margin-right: 0;
+            }
+    
+            img{
+                width: 38.7%;
+                margin-top: 10.3%;
+            }
+    
+            p{
+                margin-top: 10px;
+                text-align: center;
+                font-family: "Montserrat-ExtraBold";
+                font-size: 20px;
+                text-transform: uppercase;
+                color: #96b24a;
+                line-height: 1.3;
+            }
+            
+        }
+    }
+}
+
+.section-teplitsa-cost-calc{
+    margin-bottom: 200px;
+    background: url(../img/teplitsa-calc-back.png) center top no-repeat;
+
+    .cost-calc-content{
+
+        h2{
+            margin-bottom: 60px;
+        }
+    }
+
+    .teplitsa-leaves-1{
+        width: 11.25%;
+        position: absolute;
+        top: -35.5%;
+        right: 0;
+    }
+}
+
+//------------ABOUT PAGE----------
+
+.section-about-page{
+    .for-dealers-wrap{
+        p{
+            span{
+                font-family: "Montserrat-Bold";
+            }
+        }
+    }
+}
+
+
+//------------DEALERS PAGE----------
+
+.section-for-dealers{
+    margin: 131px 0 165px;
+    
+    .for-dealers-wrap{
+        padding: 0 8% 0 12.2%;
+
+        h2{
+            font-size: 28px;
+            text-align: left;
+            margin-bottom: 50px;
+        }
+
+        p{
+            font-size: 20px;
+            line-height: 1.95;
+            text-transform: uppercase;
+            font-family: "Montserrat-Medium";
+        }
+
+        &>div:first-child{
+            margin-bottom: 50px;
+        }
+
+        &>div:first-child{
+            width: 62%;
+        }
+    }
+}
+
+.section-distributors-form{
+    margin-bottom: 200px;
+
+    .cost-calc-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 12%;
+
+        h2{
+            font-size: 36px;
+        }
+
+        .dealers-form-wrap{
+            height: 75px;
+            justify-content: space-between;
+
+            .contact-tel{
+                width: 28%;
+                height: 100%;
+            }
+    
+            .dealer-name-input, .mail-input{
+                height: 100%;
+                border-radius: 20px;
+                overflow: hidden;
+
+                input{
+                    height: 100%;
+                    width: 100%;
+                    font-size: 22px;
+                    padding: 0 2rem;
+                }
+            }
+
+            .dealer-name-input{
+                width: 18%;
+            }
+
+            .mail-input{
+                width: 27%;
+            }
+    
+            .contact-link{
+                width: 22%;
+                height: 100%;
+                margin-left: 0;
+                border-radius: 20px;
+
+                .send-dealer{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 18.6px;
+                    text-transform: uppercase;
+                    background-color: #8bb337;
+                    color: #fff;
+                    font-family: "Montserrat-Bold";
+                }
+            }
+        }
+    }
+}
+
+
+//-------------CONTACTS PAGE-------------
+
+.section-contacts-page{
+
+    padding: 120px 0 100px;
+
+    .section-contacts-page-wrap{
+        padding: 0 5.5% 0 12.2%;
+
+        h2{
+            font-size: 35px;
+            text-align: left;
+            margin-bottom: 55px;
+        }
+
+        p{
+            font-size: 28px;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        p:last-child{
+            margin-top: 50px;
+        }
+
+        p span{
+            font-family: "Montserrat-Bold";
+        }
+
+        p a{
+            font-family: "Montserrat-Medium";
+            color: #4c4e49;
+        }
+    }
+}
+
+.section-contacts-page-calc{
+    margin-bottom: 200px;
+    background: url(../img/teplitsa-calc-back.png) center top no-repeat;
+    background-size: cover;
+}
+
+
+//-------------DELIVERY PAGE-------------
+
+.section-delivery-page{
+
+    padding: 120px 0 90px;
+
+    .for-dealers-wrap{
+        padding: 0 5.5% 0 12.2%;
+
+        &>div:first-child{
+            width: 83.5%;
+        }
+        
+        h2{
+            font-size: 35px;
+            text-align: left;
+            margin-bottom: 55px;
+        }
+
+        p{
+            font-size: 28px;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        p span{
+            font-family: "Montserrat-Bold";
+        }
+    }
+
+    .for-dealers-wrap div{
+        margin-bottom: 40px;
+    }
+}
+
+.section-delivery-tables{
+    width: 66.1%;
+    margin: 0 auto 195px;
+
+    h3{
+        font-family: "Montserrat-Bold";
+        font-size: 35px;
+        line-height: 1;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .table-wrap{
+        margin-bottom: 75px;
+
+        table{
+
+            tr{
+                height: 77px;
+            }
+
+            th, td{
+                width: 50%;
+                font-size: 24px;
+            }
+
+            td{
+                font-size: 28px;
+            }
+        }
+    }
+
+    &>div:last-child .table-wrap{
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+//----------ADAPTIVE------------
+
+@media(max-width: 1820px){
+    .wrapper{
+        .logo-wrap{
+            .logo{
+
+                img{
+                    width: 85px;
+                }
+            }
+
+            .title{
+                font-size: 20px;
+            }
+
+            p{
+                font-size: 15px;
+            }
+        }
+
+        .contact-tel{
+
+            img{
+                left: 15%;
+            }
+
+            .ua-code{
+                left: 26%;
+                font-size: 20px;
+            }
+
+            .tel-mask{
+                font-size: 20px;
+            }
+        }
+    }
+
+    section{
+        h2{
+            font-size: 36px;
+        }
+    }
+
+    .header-wrap{
+        header{
+            .navbar{
+                .navbar-collapse{
+                    ul{
+                        .nav-item{
+                            margin-left: 20px;
+        
+                            .nav-link, a{
+                                font-family: "Montserrat-Bold";
+                                text-transform: uppercase;
+                                color: #010101;
+                                font-size: 16px;
+                                padding: 0;
+                            }
+                        }
+        
+                        .nav-item:first-child{
+                            margin-left: 0;
+                        }
+        
+                        .nav-item:last-child{
+                            margin-left: 40px;
+    
+                            img{
+                                width: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .section-slogan{
+        margin-top: 110px;
+
+        .slogan-wrap{
+            h1{
+                font-size: 28px;
+            }
+
+            p{
+                font-size: 21px;
+                margin: 45px 0;
+            }
+
+            .slogan-contact{
+                .slogan-contact-tel{
+                    height: 60px;
+                }
+    
+                .send-tel{
+                    height: 65px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .section-privilege{
+        padding-top: 390px;
+
+        .privilege-box{
+            height: 240px;
+        }
+
+        .privilege-main{
+
+            h2{
+                margin: 100px 0 90px;
+            }
+
+            .privilege{
+                img{
+                    width: 80px;
+                }
+
+                h3{
+                    font-size: 16px;
+                }
+
+                p{
+                    font-size: 17px;
+                }
+            }
+
+            .privilege-main-right{
+                .teplitsa-frame{
+                    margin-top: 90px;
+                }
+            }
+        }
+    }
+
+    .section-cost-calc{
+        .cost-calc-content{
+            h2{
+                margin: 100px 0 65px;
+            }
+            p{
+                font-size: 26px;
+                margin-bottom: 70px;
+            }
+        }
+    }
+
+    .section-teplitsa-type{
+
+        .teplitsa-type-content{
+            h2{
+                padding: 110px 0 95px;
+            }
+        }
+
+        .teplitsa-box{
+            h3{
+                font-size: 21px;
+            }
+        }
+    }
+
+
+    .section-our-works{
+        .our-works-content{
+
+            &>h2{
+                padding: 95px 0 80px;
+            }
+
+            .faq-wrap{
+                padding-bottom: 130px;
+                
+                .accordion{
+                    .accordion-button{
+                        padding: 25px 6.1%;
+                    }
+
+                    .accordion-button{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-wrap{
+        footer{
+            padding: 80px 0 55px;
+
+            h3{
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+            .contacts-wrap{
+                p{
+                    font-size: 16px;
+                    margin-bottom: 18px;
+                }
+
+                .contact-link{
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .info-wrap{
+                ul li{
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .footer-text{
+                font-size: 16px;
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+@media(max-width: 1660px){
+    .wrapper{
+        .logo-wrap{
+            .logo{
+                width: 85px;
+                margin-right: 10px;
+
+                img{
+                    width: 85px;
+                }
+            }
+
+            .title{
+                font-size: 20px;
+            }
+
+            p{
+                font-size: 14px;
+            }
+        }
+
+        .contact-tel{
+
+            img{
+                left: 15%;
+            }
+
+            .ua-code{
+                left: 26%;
+                font-size: 18px;
+            }
+
+            .tel-mask{
+                font-size: 18px;
+            }
+        }
+    }
+
+    section{
+        h2{
+            font-size: 32px;
+        }
+    }
+
+    .header-wrap{
+        header{
+            .navbar{
+                .logo-wrap{
+
+                }
+
+                .navbar-collapse{
+                    ul{
+                        .nav-item{
+                            margin-left: 20px;
+        
+                            .nav-link, a{
+                                font-family: "Montserrat-Bold";
+                                text-transform: uppercase;
+                                color: #010101;
+                                font-size: 15px;
+                                padding: 0;
+                            }
+                        }
+        
+                        .nav-item:first-child{
+                            margin-left: 0;
+                        }
+        
+                        .nav-item:last-child{
+                            margin-left: 40px;
+    
+                            img{
+                                width: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .section-slogan{
+        margin-top: 110px;
+
+        .slogan-wrap{
+            h1{
+                font-size: 25px;
+            }
+
+            p{
+                font-size: 20px;
+            }
+
+            .slogan-contact{
+                .slogan-contact-tel{
+                    height: 55px;
+                }
+    
+                .send-tel{
+                    height: 60px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .section-privilege{
+
+        .privilege-box{
+            height: 220px;
+
+            p{
+                font-size: 16px;
+            }
+        }
+
+        .privilege-main{
+
+            h2{
+                margin: 90px 0 85px;            
+            }
+
+            .privilege{
+                img{
+                    width: 80px;
+                }
+
+                h3{
+                    font-size: 16px;
+                }
+
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .section-cost-calc{
+        .cost-calc-content{
+            h2{
+                margin: 90px 0 55px;
+            }
+
+            p{
+                font-size: 24px;
+                margin-bottom: 60px;
+            }
+
+            .contact-tel{
+                height: 65px;
+            }
+
+            .contact-link{
+                height: 65px;
+            }
+        }
+    }
+
+    .section-teplitsa-type{
+        .teplitsa-box{
+            h3{
+                font-size: 18px;
+            }
+        }
+    }
+
+    .section-our-works{
+        .our-works-content{
+            &>h2{
+                font-size: 30px;
+                padding: 85px 0 70px;
+            }
+
+            .faq-wrap{
+                padding-bottom: 110px;
+
+                h2{
+                    margin: 90px 0 80px;
+                }
+
+                .accordion{
+
+                    .accordion-item{
+                        margin-bottom: 18px;
+                    }
+
+                    .accordion-button{
+                        font-size: 18px;
+                        padding: 22px 6.1%;
+                    }
+
+                    .accordion-body{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-wrap{
+        footer{
+            padding: 70px 0 50px;
+
+            h3{
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .contacts-wrap{
+                p{
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+
+                .contact-link{
+                    a{
+                        font-size: 14px;
+                    }
+
+                    &:last-child{
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            .info-wrap{
+                ul li{
+                    margin-bottom: 10px;
+
+                    a{
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .footer-text{
+                font-size: 14px;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 1520px){
+    
+    .wrapper{
+        .logo-wrap{
+            .logo{
+                width: 75px;
+                margin-right: 10px;
+
+                img{
+                    width: 75px;
+                }
+            }
+
+            .title{
+                font-size: 14px;
+            }
+
+            p{
+                font-size: 10.5px;
+            }
+        }
+
+        .contact-tel{
+
+            img{
+                left: 15%;
+            }
+
+            .ua-code{
+                left: 26%;
+                font-size: 15px;
+            }
+
+            .tel-mask{
+                font-size: 15px;
+            }
+        }
+    }
+    
+    .header-wrap{
+        header{
+            .navbar{
+                .logo-wrap{
+                    width: 24.5%;
+                }
+
+                .navbar-collapse{
+                    ul{
+                        .nav-item{
+                            margin-left: 20px;
+        
+                            .nav-link, a{
+                                font-family: "Montserrat-Bold";
+                                text-transform: uppercase;
+                                color: #010101;
+                                font-size: 13px;
+                                padding: 0;
+                            }
+                        }
+        
+                        .nav-item:first-child{
+                            margin-left: 0;
+                        }
+        
+                        .nav-item:last-child{
+                            margin-left: 40px;
+    
+                            img{
+                                width: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    section{
+        h2{
+            font-size: 24px;
+        }
+    }
+
+    .section-slogan{
+        margin-top: 100px;
+
+        .slogan-wrap{
+            h1{
+                font-size: 23px;
+            }
+
+            p{
+                font-size: 16px;
+                line-height: 1.8;
+                margin: 35px 0;
+            }
+
+            .slogan-contact{
+
+                .slogan-contact-tel{
+                    height: 42px;
+                    border: 1.5px solid #4e504b;
+                    margin-bottom: 20px;
+
+                    .ua-code{
+                        margin-top: 1px;
+                        font-size: 14px;
+                    }
+
+                    .tel-mask{
+                        font-size: 14px;
+                    }
+                }
+
+                .send-tel{
+                    height: 45px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .section-privilege{
+        padding-top: 370px;
+
+        .privilege-box{
+            height: 175px;
+
+            img{
+                margin-top: 27px;
+            }
+
+            p{
+                font-size: 13px;
+                margin-top: 18px;
+            }
+        }
+
+        .privilege-main{
+            h2 {
+                margin-top: 62px;
+                margin-bottom: 80px;
+            }
+
+            .privilege{
+                margin-bottom: 40px;
+                
+                img{
+                    width: 55px;
+                    margin-bottom: 18px;
+                }
+
+                h3{
+                    font-size: 12px;
+                    margin-bottom: 5px;
+                }
+
+                p{
+                    font-size: 14px;
+                }
+            }
+
+            .privilege-main-left{
+                .privilege{
+                    margin-bottom: 45px;
+                }
+            }
+
+            .privilege-main-right{
+                .teplitsa-frame{
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    .section-teplitsa-type{
+        padding-bottom: 75px;
+
+        .teplitsa-type-content{
+            h2 {
+                padding: 100px 0 80px;
+            }
+        }
+
+        .teplitsa-box{
+            margin-bottom: 40px;
+
+            h3{
+                font-size: 15px;
+                margin: 35px 0 20px;
+            }
+
+            .details-link{
+                height: 40px;
+
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .section-cost-calc{
+        padding-bottom: 75px;
+
+        .cost-calc-content{
+            h2{
+                margin: 95px 0 50px;
+            }
+
+            p{
+                font-size: 20px;
+                margin-bottom: 55px;
+            }
+
+            .contact-tel{
+                height: 50px;
+            }
+
+            .contact-link{
+                height: 50px;
+
+                .send-tel, .send-dealer{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .section-our-works{
+        .our-works-content{
+            &>h2{
+                font-size: 25px;
+                padding: 70px 0 65px;
+            }
+
+            .slider-container{
+                padding: 35px 0;
+            }
+
+            .faq-wrap{
+                padding-bottom: 100px;
+
+                h2{
+                    margin: 70px 0 60px;
+                }
+
+                .accordion{
+                    .accordion-item{
+                        border-radius: 16px;
+                        margin-bottom: 14px;
+                    }
+
+                    .accordion-button{
+                        font-size: 14px;
+                        padding: 16px 6.1%;
+                    }
+
+                    .accordion-body{
+                        font-size: 14px;
+                    }
+
+                    .accordion-header{
+                        span{
+                            height: 12px;
+                            width: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-wrap{
+        footer{
+            padding: 53px 0 43px;
+
+            h3{
+                font-size: 16px;
+                margin-bottom: 18px;
+            }
+
+            .contacts-wrap{
+                p{
+                    font-size: 12px;
+                    margin-bottom: 8px;
+                }
+
+                .contact-link{
+                    a{
+                        font-size: 12px;
+                    }
+                }
+
+                .contact-link:nth-child(3) {
+                    margin-bottom: 0px;
+                }
+
+                .contact-link:last-child{
+                    margin-top: 5px;
+                }
+            }
+
+            .info-wrap{
+                ul li{
+                    margin-bottom: 3px;
+                    a{
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .footer-text{
+                font-size: 12px;
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+@media(max-width:1400px){
+    .section-privilege {
+        padding-top: 340px;
+    }
+}
+
+@media(max-width:1370px){
+    .section-privilege {
+        padding-top: 320px;
+    }
+}
+
+@media(max-width:1300px){
+    .section-privilege {
+        padding-top: 290px;
+    }
+}
+
+@media(max-width:1260px){
+    .section-privilege {
+        padding-top: 235px;
+    }
+}
+
+//-------------TEPLITSA PAGE ADAPTIVE-----------
+
+@media(max-width: 1820px){
+    section{
+        .table-wrap{
+            table{
+                tr{
+                    th, td{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-teplitsa{
+        .teplitsa-slider-wrap{
+            h1{
+                font-size: 26px;
+            }
+        }
+
+        .teplitsa-info-wrap{
+            p{
+                font-size: 21px;
+            }
+
+            .price-contact{
+                height: 55px;
+
+                .price{
+                    font-size: 20px;
+                }
+
+                .contact-tel{
+                    .ua-code{
+                        font-size: 16px;
+                    }
+
+                    .tel-mask{
+                        font-size: 16px;
+                    }
+                }
+
+                .send-order{
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .teplitsa-privilege-wrap{
+            margin-top: 65px;
+    
+            .privilege-box{
+                height: 205px;
+
+                p{
+                    font-size: 17px;
+                }
+            }
+    
+        }
+    }
+
+
+}
+
+@media(max-width: 1600px){
+    .section-teplitsa{
+        padding: 55px 5.5% 75px 6%;
+
+        .teplitsa-slider-wrap{
+            h1{
+                font-size: 19px;
+                margin-top: 10px;
+                margin-bottom: 45px;
+            }
+        }
+
+        .teplitsa-info-wrap{
+            p{
+                font-size: 16px;
+            }
+
+            .price-contact{
+                margin: 30px 0;
+                height: 42px;
+
+                .price{
+                    border-radius: 14px;
+                    border: 2px solid #96b24a;
+                    font-size: 14px;
+                }
+
+                .contact-tel{
+                    border-radius: 14px;
+                    border: 2px solid #96b24a;
+
+                    .ua-code{
+                        left: 25%;
+                        margin-top: 1px;
+                        font-size: 14px;
+                    }
+
+                    .tel-mask{
+                        font-size: 14px;
+                    }
+                }
+
+                .send-order{
+                    border-radius: 14px;
+                    font-size: 14px;
+                }
+            }
+
+            .tabs-wrap{
+                padding-top: 43px;
+
+                label{
+                    height: 43px;
+                    font-size: 16px;
+                }
+
+                .content{
+                    font-size: 12px;
+                }
+
+                #tab-btn-1:checked~#content-1{
+                    padding: 23px 5.5%;
+                }
+
+                #tab-btn-2:checked~#content-2{
+                    padding: 18px 3% 18px 4%;
+                }
+            }
+        }
+
+        .table-wrap{
+            margin-bottom: 25px;
+            border-radius: 25px;
+
+            table{
+                tr{
+                    height: 35px;
+                }
+
+                th, td{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .teplitsa-privilege-wrap{
+            margin-top: 55px;
+
+            .privilege-box{
+                height: 160px;
+
+                p{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+//-------------OTHER PAGES ADAPTIVE-------------
+
+@media(max-width: 1820px){
+    .section-for-dealers{
+        margin: 120px 0 135px;
+
+        .for-dealers-wrap{
+
+            h2{
+                font-size: 24px;
+                margin-bottom: 40px;
+            }
+
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+
+    .section-delivery-page{
+        padding: 100px 0;
+
+        .for-dealers-wrap{
+            div{
+                margin-bottom: 30px;
+            }
+
+            h2{
+                font-size: 28px;
+                margin-bottom: 25px;
+            }
+
+            p{
+                font-size: 22px;
+            }
+        }
+    }
+
+    .section-delivery-tables{
+        margin-bottom: 150px;
+
+        h3{
+            font-size: 30px;
+        }
+
+        .table-wrap{
+            table{
+                tr{
+                    height: 70px;
+                }
+
+                th{
+                    font-size: 24px;
+                }
+
+                td{
+                    font-size: 28px;
+                }
+            }
+
+            .first-table{
+                tr{
+                    td:first-child{
+                       font-size: 24px; 
+                    }
+                }
+            }
+        }
+    }
+
+    .section-contacts-page{
+        padding: 100px 0 90px;
+
+        .section-contacts-page-wrap{
+            h2{
+                font-size: 30px;
+                margin-bottom: 40px;
+            }
+
+            p{
+                font-size: 24px;
+            }
+        }
+    }
+
+    .section-contacts-page-calc{
+        margin-bottom: 170px;
+    }
+
+    .section-distributors-form{
+        margin-bottom: 180px;
+
+        .cost-calc-content{
+            h2{
+                font-size: 32px;
+            }
+
+            .dealers-form-wrap{
+                height: 65px;
+        
+                .dealer-name-input, .mail-input{
+                    input{
+                        font-size: 21px;
+                        padding: 0 1.5rem;
+                    }
+                }
+
+                .contact-link{
+                    .send-dealer{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1660px){
+
+    .section-for-dealers{
+        margin: 85px 0 100px;
+
+        .for-dealers-wrap{
+            &>div:first-child{
+                margin-bottom: 30px;
+            }
+
+            h2{
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+
+    .section-delivery-page{
+        padding: 80px 0;
+
+        .for-dealers-wrap{
+            div{
+                margin-bottom: 30px;
+            }
+
+            h2{
+                font-size: 22px;
+                margin-bottom: 35px;
+            }
+
+            p{
+                font-size: 17px;
+            }
+        }
+    }
+
+    .section-delivery-tables{
+        margin-bottom: 110px;
+
+        h3{
+            font-size: 24px;
+            margin-bottom: 35px;
+        }
+
+        .table-wrap{
+            margin-bottom: 60px;
+
+            table{
+                tr{
+                    height: 50px;
+                }
+
+                th{
+                    font-size: 16px;
+                }
+
+                td{
+                    font-size: 20px;
+                }
+            }
+
+            .first-table{
+                tr td:first-child{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .section-contacts-page{
+        padding: 80px 0 70px;
+        
+        .section-contacts-page-wrap{
+            h2{
+                font-size: 24px;
+                margin-bottom: 35px;
+            }
+
+            p{
+                font-size: 16px;
+            }
+
+            p:last-child{
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .section-contacts-page-calc{
+        margin-bottom: 140px;
+    }
+
+    .section-distributors-form{
+        margin-bottom: 160px;
+
+        .cost-calc-content{
+            h2{
+                font-size: 28px;
+            }
+
+            .dealers-form-wrap{
+                height: 60px;
+        
+                .dealer-name-input, .mail-input{
+                    border-radius: 18px;
+
+                    input{
+                        font-size: 21px;
+                        padding: 0 1.5rem;
+                    }
+                }
+
+                .contact-link{
+                    border-radius: 18px;
+                    .send-dealer{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1520px){
+    .section-distributors-form{
+        margin-bottom: 135px;
+
+        .cost-calc-content{
+
+            .dealers-form-wrap{
+                height: 55px;
+        
+                .dealer-name-input, .mail-input{
+                    border-radius: 18px;
+
+                    input{
+                        font-size: 16px;
+                        padding: 0 1.5rem;
+                    }
+                }
+
+                .contact-link{
+                    border-radius: 18px;
+                    .send-dealer{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+//-----------MOBILE--------------
+
+@media(max-width: 576px){
+
+    .scroll-header{
+        background-color: #fff;
+        transition: all .2s;
+    }
+
+    .wrapper{
+        .logo-wrap{
+            .logo{
+                width: auto;
+                img {
+                    width: 40px;
+                }
+            }
+
+            .title{
+                font-size: 9px;
+            }
+
+            p{
+                font-size: 7px;
+            } 
+        }
+
+        .contact-tel{
+            img{
+                left: 13%;
+            }
+
+            .ua-code{
+                font-size: 13px;
+                left: 26%;
+            }
+
+            .tel-mask{
+                font-size: 13px;
+            }
+        }
+
+        .leaves1, .leaves2, .leaves4{
+            display: none;
+        }
+    }
+
+    .main-page-wrapper{
+        background: url(../img/mobile-main-wrap.png) no-repeat;
+        background-size: 100%;
+    }
+
+    .for-dealers-page-wrapper, .contacts-page-wrapper{
+        background-size: cover;
+        background-position: center top;
+    }
+
+    .delivery-page-wrapper{
+        background: url(../img/delivery-page-back-mobile.png) no-repeat;
+        background-size: cover;
+    }
+
+    .teplitsa-page-wrapper{
+        background-size: cover;
+        background-position: center top;
+    }
+
+    section{
+        h2{
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0 auto;
+        }
+    }
+
+    .header-wrap{
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+
+        header{
+            padding: 0;
+
+            .navbar{
+                padding: 25px 20px 20px 25px !important;
+                width: 100%;
+
+                .logo-wrap{
+                    width: 190px;
+                }
+
+                .navbar-collapse{
+                    z-index: 10;
+                    ul{
+                        padding-top: 20px;
+
+                        .nav-item{
+                            margin-left: 0;
+
+                            .nav-link{
+                                width: 100%;
+                                margin-top: 7px;
+                                font-size: 12px;
+                            }
+    
+                            &:last-child{
+                                margin-top: 15px;
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .section-slogan{
+        margin-top: 0;
+        padding-left: 0;
+        padding-top: 130px;
+
+        .slogan-wrap{
+            width: 320px;
+            margin: 0 auto;
+
+            h1{
+                font-size: 12px;
+                line-height: 1.8;
+                text-align: center;
+            }
+
+            p{
+                width: 85%;
+                font-size: 12px;
+                margin: 0 auto;
+                margin-top: 22px;
+                text-align: center;
+            }
+
+            .slogan-contact{
+                width: 100%;
+
+                .slogan-contact-tel{
+                    width: 270px;
+                    height: 40px;
+                    border-radius: 15px;
+                    margin-top: 27px;
+                    border: 1px solid #4e504b;
+
+                    .ua-code{
+                        left: 27%;
+                        font-size: 13px;
+                        margin-top: 0;
+                    }
+    
+                    .tel-mask{
+                        font-size: 13px;
+                        padding-left: 112px;
+                    }
+                }
+
+                .send-tel{
+                    width: 90%;
+                    height: 40px;
+                    font-size: 11px;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+
+    .section-privilege{
+        padding: 200px 25px 0;
+
+        &>div:first-child{
+            justify-content: space-between !important;
+        }
+
+        .privilege-box{
+            margin: 0;
+            width: 31%;
+            height: 80px;
+            border-radius: 7px;
+
+            img{
+                margin-top: 12px;
+            }
+
+            p{
+                font-size: 7px;
+                margin-top: 7px;
+            }
+        }
+
+        .privilege-main{
+            display: none;
+        }
+
+        .privilege-main-mobile{
+            display: block;
+
+            h2{
+                width: 280px;
+                margin: 45px auto 35px;
+            }
+
+            &>div{
+                width: 100%;
+                display: flex;
+            }
+
+
+            .privilege{
+                width: 50%;
+                text-align: center;
+                margin-bottom: 20px;
+
+                img{
+                    width: 45px;
+                }
+
+                h3{
+                    font-size: 10px;
+                    margin: 16px 0 14px;
+                    text-transform: uppercase;
+                    font-family: "Montserrat-Bold";
+                }
+
+                p{
+                    width: 100%;
+                    font-size: 10.5px;
+                    line-height: 1.2;
+
+                    br{
+                        display: none;
+                    }
+                }
+            }
+
+            .privilege:first-child{
+                padding-right: 5px;
+            }
+
+            .privilege:last-child{
+                padding-left: 5px;
+            }
+
+            .teplitsa-frame{
+                display: block;
+                margin-top: 35px;
+            }
+        }
+    }
+
+    .section-teplitsa-type{
+        padding: 0 20px 20px 20px;
+
+        .teplitsa-type-content{
+            h2{
+                padding: 55px 0 40px;
+            }
+
+            .teplitsa-box{
+                width: 48%;
+                padding: 7.5% 6.3%;
+                border-radius: 25px;
+                margin-bottom: 16px;
+
+                h3{
+                    margin: 18px 0 10px;
+                    font-size: 8px;
+                    text-align: center;
+                }
+
+                .details-link{
+                    height: 25px;
+                    border-radius: 5px;
+
+                    a{
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-cost-calc{
+        padding-bottom: 25px;
+
+        .cost-calc-content{
+            width: 100%;
+
+            h2{
+                width: 235px;
+                font-size: 15px;
+                margin: 30px auto 20px;
+            }
+            
+
+            p{
+                width: 340px;
+                font-size: 12px;
+                line-height: 1.5;
+                margin: 0 auto;
+                margin-bottom: 20px;
+
+                br{
+                    display: none;
+                }
+            }
+
+            &>div{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-tel{
+                border-radius: 15px;
+                height: 40px;
+                width: 270px;
+            }
+
+            .contact-link{
+                border-radius: 15px;
+                height: 40px;
+                width: 270px;
+                margin-left: 0;
+                margin-top: 18px;
+
+                .send-tel{
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .leaves3{
+            width: 25%;
+            top: 63%;
+        }
+
+        .leaves5{
+            display: none;
+        }
+    }
+
+    .section-our-works{
+        .our-works-content{
+
+            &>h2{
+                font-size: 13px;
+                padding: 30px 0 25px;
+            }
+
+            .slider-container{
+                width: auto;
+                margin: 0 25px;
+                padding: 30px 0;
+                border-radius: 20px;
+            }
+
+            .main-slider{
+                padding: 0 30px;
+
+                .control{
+                    width: 8%;
+                }
+
+                .prev{
+                    left: 1%;
+                }
+
+                .next{
+                    right: 1%;
+                }
+            }
+
+            .faq-wrap{
+                width: auto;
+                padding: 0 20px 30px;
+
+                h2{
+                    font-size: 15px;
+                    margin: 45px auto 30px;
+                    width: 240px;
+                }
+
+                .accordion{
+                    .accordion-item{
+                        border-radius: 8px;
+                        margin-bottom: 8px;
+                    }
+
+                    .accordion-header{
+                        span{
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
+
+                    .accordion-button{
+                        font-family: "Montserrat-Medium";
+                        font-size: 11px;
+                        line-height: 1.4;
+                        padding: 15px 9% 15px 6%;                    
+                    }
+
+                    .accordion-body{
+                        font-size: 12px;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-wrap{
+        footer{
+            width: 100%;
+            padding: 30px 20px;
+
+            &>div:first-child{
+                flex-wrap: wrap;
+            }
+
+            .logo-wrap{
+                width: 100%;
+                margin-bottom: 35px;
+                order: 1;
+
+                p{
+                    width: 140px;
+                }
+            }
+
+            .contacts-wrap{
+                width: 55%;
+                order: 3;
+
+                p{
+                    font-size: 9px;
+                    margin-bottom: 7px;
+                }
+
+                .contact-link{
+                    display: flex;
+
+                    a{
+                        font-size: 9px;
+                    }
+                }
+            }
+
+            .info-wrap{
+                width: auto;
+                order: 2;
+
+                ul li{
+                    display: flex;
+                    margin-bottom: 4px;
+
+                    a{
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            h3{
+                font-size: 12px;
+                margin-bottom: 9px;
+            }
+
+            .footer-text{
+                font-size: 8px;
+                margin-top: 22px;
+            }
+        }
+    }
+
+    .section-for-dealers{
+        padding: 100px 0 40px;
+        margin: 0;
+        
+        .for-dealers-wrap{
+            padding: 0 6%;
+
+            &>div:first-child{
+                width: 100%;
+            }
+
+            h2{
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+
+            p{
+                font-size: 10px;
+            }
+        }
+    }
+
+    .section-contacts-page{
+        padding: 100px 0 40px;
+
+        .section-contacts-page-wrap{
+            padding: 0 6%;
+
+            h2{
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+
+            p{
+                font-size: 9px;
+            }
+        }
+    }
+
+    .section-distributors-form, .section-contacts-page-calc{
+        margin-bottom: 80px;
+    }
+
+    .section-distributors-form{
+        .cost-calc-content{
+            padding: 0;
+
+            h2{
+                width: 90%;                
+                font-size: 15px;
+                margin: 30px auto 20px;
+            }
+
+            .dealers-form-wrap{
+                height: auto;
+
+                .contact-tel{
+                    height: 40px;
+                    width: 270px;
+                }
+
+                .dealer-name-input, .mail-input{
+                    height: 40px;
+                    width: 270px;
+                    margin-top: 18px;
+                    border-radius: 15px;
+
+                    input{
+                        font-size: 13px;
+                        padding: 0 1rem;
+                    }
+                }
+
+                .contact-link{
+                    height: 40px;
+                    width: 270px;
+                    border-radius: 15px;
+
+                    .send-dealer{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-delivery-page{
+        padding: 100px 0 30px;
+
+        .for-dealers-wrap{
+            padding: 0 6%;
+
+            &>div:first-child{
+                width: 100%;
+            }
+
+            div{
+                margin-bottom: 15px;
+            }
+
+            h2{
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+
+            p{
+                font-size: 10px;
+            }
+        }
+    }
+
+    .section-delivery-tables{
+        width: 100%;
+        padding: 0 30px;
+        margin: 30px 0 40px;
+
+        h3{
+            font-size: 12px;
+            margin-bottom: 22px;
+        }
+
+        .table-wrap{
+            margin-bottom: 27px;
+            border-radius: 18px;
+
+            table{
+                tr{
+                    height: 30px;
+                }
+
+                th{
+                    font-size: 10px;
+                }
+
+                td{
+                    font-size: 14px;
+                }
+            }
+            
+            .first-table{
+                tr td:first-child{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .section-teplitsa{
+        padding: 120px 6% 40px;
+
+        &>div:first-child{
+            flex-direction: column;
+            justify-content: left;
+        }
+
+        .teplitsa-slider-wrap{
+            width: 100%;
+
+            h1{
+                margin-top: 0;
+                margin-bottom: 25px;
+                font-size: 16px;
+            }
+
+            .teplitsa-slider-container{
+                width: auto;
+                padding: 30px 0;
+                border-radius: 20px;
+            }
+
+            .main-slider{
+                padding: 0 30px;
+
+                .control{
+                    width: 8%;
+                }
+            }
+        }
+
+        .teplitsa-info-wrap{
+            width: 100%;
+            margin-top: 25px;
+
+            p{
+                width: 100%;
+                font-size: 13px;
+                line-height: 1.5;
+                padding: 0 10px;
+            }
+
+            .price-contact{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+                margin: 30px 0 15px;
+
+                .price{
+                    order: 4;
+                    width: 120px;
+                    height: 35px;
+                    margin-top: 30px;
+                }
+
+                .contact-tel{
+                    order: 1;
+                    height: 35px;
+                    width: 200px;
+
+                    img{
+                        left: 10%;
+                    }
+
+                    .ua-code{
+                        font-size: 12px;
+                        left: 22%;
+                    }
+
+                    .tel-mask{
+                        font-size: 12px;
+                    }
+                }
+
+                .send-order{
+                    order: 3;
+                    height: 35px;
+                    width: 210px;
+                    margin-top: 15px;
+                }
+
+                .order-form-error{
+                    order: 2;
+                }
+            }
+
+            .tabs-wrap{
+                padding-top: 35px;
+                border-bottom-left-radius: 16px;
+                border-bottom-right-radius: 16px;
+
+                label{
+                    height: 35px;
+                    font-size: 13px;
+                    border-top-left-radius: 16px;
+                    border-top-right-radius: 16px;
+                }
+
+                .list{
+                    flex-direction: column;
+
+                    ul{
+                        width: 100%;
+
+                        li{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .table-wrap{
+            border-radius: 16px;
+            margin-bottom: 30px;
+
+            table{
+                th, td{
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .teplitsa-privilege-wrap{
+            width: 100%;
+            flex-wrap: wrap;
+            
+            .privilege-box{
+                width: 48%;
+                height: 120px;
+                margin-bottom: 15px;
+                flex-wrap: wrap;
+
+                img{
+                    width: 32%;
+                }
+
+                p{
+                    font-size: 11px;
+                }
+
+                &:last-child{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .section-teplitsa-cost-calc{
+        margin-bottom: 80px;
+    }
+}
+
+@media(max-width: 410px){
+    .section-privilege{
+        padding-top: 180px;
+    }
+}
+
+@media(max-width: 400px){
+    .section-slogan{
+        padding-top: 110px;
+
+        .slogan-wrap{
+            .slogan-contact{
+                .contact-tel{
+                    width: 255px;
+                }
+
+                .send-tel{
+                    width: 85%;
+                }
+            }
+        }
+
+    }
+}
+
+@media(max-width: 390px){
+    .section-privilege{
+        padding-top: 140px;
+    }
+}
+
+@media(max-width: 360px){
+
+    .wrapper{
+        .contact-tel{
+            img{
+                left: 12%;
+            }
+
+            .ua-code{
+                font-size: 12px;
+                left: 26%;
+            }
+
+            .tel-mask{
+                font-size: 12px;
+            }
+        }
+    }
+
+    section{
+        h2{
+            font-size: 11px;
+        }
+    }
+
+    .section-slogan{
+        padding-top: 110px;
+
+        .slogan-wrap{
+            width: 280px;
+
+            h1{
+                font-size: 10px;
+                line-height: 1.8;
+                text-align: center;
+            }
+
+            p{
+                font-size: 11px;
+                margin-top: 18px;
+            }
+
+            .slogan-contact{
+                .slogan-contact-tel{
+                    width: 250px;
+                    margin-top: 30px;
+                    height: 38px;
+
+                    img{
+                        left: 12%;
+                    }
+
+                    .ua-code{
+                        left: 27%;
+                        font-size: 12px;
+                    }
+    
+                    .tel-mask{
+                        padding-left: 105px;
+                        font-size: 12px;
+                    }
+                }
+
+                .send-tel{
+                    width: 250px;
+                    height: 38px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .section-privilege{
+        padding: 150px 20px 0;
+
+        .privilege-box{
+            height: 68px;
+
+            img{
+                margin-top: 9px;
+            }
+
+            p{
+                font-size: 6px;
+            }
+        }
+
+        .privilege-main{
+            display: none;
+        }
+
+        .privilege-main-mobile{
+            display: block;
+
+            h2{
+                width: 230px;
+                margin: 30px auto 25px;
+            }
+
+            .privilege{
+                margin-bottom: 15px;
+
+                img{
+                    width: 35px;
+                }
+
+                h3{
+                    font-size: 9px;
+                    margin: 15px 0 10px;
+                }
+            }
+
+            .teplitsa-frame{
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .section-teplitsa-type{
+        .teplitsa-type-content{
+            h2{
+                padding: 40px 0 35px;
+            }
+
+            .teplitsa-box{
+                h3{
+                    margin: 15px 0 7px;
+                    font-size: 7px;
+                }
+
+                .details-link{
+                    height: 20px;
+                    border-radius: 5px;
+
+                    a{
+                        font-size: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-cost-calc{
+        padding-bottom: 20px;
+
+        .cost-calc-content{
+            h2{
+                width: 220px;
+                font-size: 14px;
+                margin: 20px auto 16px;
+            }
+
+            p{
+                font-size: 11px;
+                width: 275px;
+                margin-bottom: 15px;
+            }
+
+            .contact-tel{
+                width: 250px;
+                height: 38px;
+            }
+
+            .contact-link{
+                width: 250px;
+                height: 38px;
+                margin-top: 13px;
+
+                .send-tel{
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+    .section-distributors-form, .section-contacts-page-calc{
+        margin-bottom: 65px;
+    }
+
+    .section-distributors-form{
+        .cost-calc-content{
+            h2{
+                width: 90%;
+                font-size: 14px;
+                margin: 20px auto 16px;
+            }
+
+            .dealers-form-wrap{
+
+                .contact-tel{
+                    width: 250px;
+                    height: 38px;
+                }
+
+                .dealer-name-input, .mail-input{
+                    width: 250px;
+                    height: 38px;
+                    margin-top: 14px;
+
+                    input{
+                        font-size: 12px;
+                    }
+                }
+
+                .contact-link{
+                    width: 250px;
+                    height: 38px;
+                }
+            }
+        }
+    }
+
+    .section-our-works{
+        .our-works-content{
+            &>h2{
+                font-size: 11px;
+                padding: 25px 0 20px;
+            }
+
+            .slider-container{
+                margin: 0 25px;
+            }
+
+            .faq-wrap{
+                padding: 0 20px 25px;
+
+                h2{
+                    font-size: 14px;
+                    margin: 35px auto 20px;
+                }
+
+                .accordion{
+
+                    .accordion-item{
+                        margin-bottom: 8px;
+                    }
+
+                    .accordion-header{
+                        span{
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+
+                    .accordion-button{
+                        font-size: 10px;
+                    }
+
+                    .accordion-body{
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-wrap{
+        footer{
+            padding: 22px 20px;
+
+            .logo-wrap{
+                margin-bottom: 35px;
+            }
+
+            .contacts-wrap{
+                p{
+                    font-size: 8px;
+                    margin-bottom: 5px;
+                }
+
+                .contact-link{
+                    display: flex;
+
+                    a{
+                        font-size: 8px;
+                    }
+                }
+            }
+
+            .info-wrap{
+                ul li{
+                    margin-bottom: 3px;
+
+                    a{
+                        font-size: 8px;
+                    }
+                }
+            }
+
+            h3{
+                font-size: 10px;
+                margin-bottom: 7px;
+            }
+        }
+    }
+
+    .section-for-dealers{        
+        .for-dealers-wrap{
+            p{
+                font-size: 9px;
+            }
+        }
+    }
+
+    .section-contacts-page{
+        .section-contacts-page-wrap{
+            p{
+                font-size: 8px;
+
+                &:last-child{
+                    margin-top: 22px;
+                }
+            }
+        }
+    }
+
+    .section-delivery-page{
+        .for-dealers-wrap{
+            p{
+                font-size: 9px;
+            }
+        }
+    }
+
+    .section-delivery-tables{
+        margin-top: 0;
+
+        .table-wrap{
+            table{
+                tr td{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .section-teplitsa{
+        .teplitsa-info-wrap{
+            p{
+                font-size: 12px;
+            }
+
+            .tabs-wrap{
+                label{
+                    font-size: 12px;
+                }
+
+                .list{
+                    ul{
+                        li{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .table-wrap{
+            border-radius: 16px;
+
+            table{
+                th, td{
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .teplitsa-privilege-wrap{            
+            .privilege-box{
+                height: 110px;
+
+                img{
+                    width: 32%;
+                }
+
+                p{
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 330px){
+    .section-privilege{
+        padding-top: 105px;
+    }
+
+    .section-distributors-form, .section-contacts-page-calc{
+        margin-bottom: 45px;
+    }
+}
+

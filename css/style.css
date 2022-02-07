@@ -1,0 +1,2209 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("../fonts/Montserrat-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat-Regular";
+  letter-spacing: 0.08em;
+  color: #4c4e49; }
+
+a, a:hover {
+  text-decoration: none;
+  color: #000;
+  font-family: "Montserrat-Bold"; }
+
+p, ul, h1, h2, h3 {
+  margin-bottom: 0; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+input {
+  border: none;
+  outline: none; }
+
+input[type="button"] {
+  border: none;
+  outline: none;
+  font-family: "Montserrat-Bold"; }
+
+.contact-form-error, .dealer-form-error {
+  display: none;
+  padding: 10px 0;
+  font-size: 20px;
+  text-align: center; }
+
+.order-form-error {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 36%;
+  padding-bottom: 10px;
+  font-size: 20px;
+  text-align: center; }
+
+@media (max-width: 1600px) {
+  .contact-form-error, .dealer-form-error {
+    font-size: 16px; }
+
+  .order-form-error {
+    font-size: 16px; } }
+@media (max-width: 576px) {
+  .contact-form-error, .dealer-form-error {
+    font-size: 12px;
+    padding: 10px 0; }
+
+  .order-form-error {
+    position: static;
+    font-size: 12px;
+    padding: 10px 0; } }
+@media (max-width: 360px) {
+  .contact-form-error, .dealer-form-error {
+    font-size: 11px; }
+
+  .order-form-error {
+    font-size: 11px; } }
+.slick-slide {
+  outline: none; }
+
+.d-flex {
+  display: flex !important; }
+
+.flex-column {
+  flex-direction: column; }
+
+.justify-content-center {
+  justify-content: center; }
+
+.justify-content-between {
+  justify-content: space-between; }
+
+.wrapper {
+  position: relative; }
+  .wrapper .back {
+    position: absolute; }
+  .wrapper .slogan-back, .wrapper .teplitsa-page-back {
+    top: 0;
+    z-index: -10; }
+  .wrapper .logo-wrap {
+    display: flex; }
+    .wrapper .logo-wrap .logo {
+      margin-right: 16px;
+      margin-top: 5px; }
+      .wrapper .logo-wrap .logo a {
+        display: block; }
+    .wrapper .logo-wrap .title {
+      font-family: "Montserrat-Bold";
+      font-size: 22px;
+      text-transform: uppercase;
+      color: #5cac00;
+      margin-bottom: 5px; }
+    .wrapper .logo-wrap p {
+      font-family: "Montserrat-Medium";
+      text-transform: uppercase;
+      font-size: 17.8px;
+      line-height: 1.4;
+      color: #010101; }
+  .wrapper .contact-tel {
+    display: flex;
+    overflow: hidden;
+    position: relative; }
+    .wrapper .contact-tel img {
+      width: 7%;
+      position: absolute;
+      top: 50%;
+      left: 13.6%;
+      transform: translateY(-50%);
+      z-index: 0; }
+    .wrapper .contact-tel .ua-code {
+      position: absolute;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      left: 25%; }
+    .wrapper .contact-tel .tel-mask {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: none;
+      padding-left: 41%;
+      padding-right: 0;
+      font-size: 22px;
+      outline: none; }
+
+.main-page-wrapper {
+  background: url(../img/slogan-back.jpg) no-repeat;
+  background-size: 100%; }
+
+.teplitsa-page-wrapper {
+  background: url(../img/teplitsa-page-back.png) no-repeat;
+  background-size: 100%; }
+
+.delivery-page-wrapper {
+  background: url(../img/delivery-page-back.png) no-repeat;
+  background-size: 100%; }
+
+.contacts-page-wrapper {
+  background: url(../img/dealers-page-back.png) no-repeat;
+  background-size: 100%; }
+
+.for-dealers-page-wrapper {
+  background: url(../img/dealers-page-back.png) no-repeat;
+  background-size: 100%; }
+
+.header-wrap header {
+  padding: 3.6% 5.5% 0 6%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  .header-wrap header .navbar {
+    width: 100%; }
+    .header-wrap header .navbar .logo-wrap {
+      width: 26.5%;
+      padding: 0;
+      margin-right: 0;
+      white-space: normal; }
+      .header-wrap header .navbar .logo-wrap div:last-child {
+        width: auto; }
+    .header-wrap header .navbar button {
+      box-shadow: none; }
+      .header-wrap header .navbar button .navbar-toggler-icon {
+        background: url(../img/nav-toggler.png) center center no-repeat; }
+    .header-wrap header .navbar .navbar-collapse ul {
+      margin-left: auto; }
+      .header-wrap header .navbar .navbar-collapse ul .nav-item {
+        margin-left: 40px;
+        display: flex;
+        align-items: center; }
+        .header-wrap header .navbar .navbar-collapse ul .nav-item .nav-link, .header-wrap header .navbar .navbar-collapse ul .nav-item a {
+          font-family: "Montserrat-Bold";
+          text-transform: uppercase;
+          color: #010101;
+          font-size: 18px;
+          padding: 0; }
+      .header-wrap header .navbar .navbar-collapse ul .nav-item:first-child {
+        margin-left: 0; }
+      .header-wrap header .navbar .navbar-collapse ul .nav-item:last-child {
+        margin-left: 60px; }
+        .header-wrap header .navbar .navbar-collapse ul .nav-item:last-child img {
+          margin-right: 5px; }
+
+section {
+  width: 100%; }
+  section h2 {
+    text-align: center;
+    font-family: "Montserrat-Bold";
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 1.1; }
+  section .table-wrap {
+    width: 100%;
+    border: 1px solid #96b24a;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 28px; }
+    section .table-wrap table {
+      width: calc(100% + 1px); }
+      section .table-wrap table tr:first-child {
+        background-color: #96b24a; }
+      section .table-wrap table tr {
+        height: 50px;
+        background-color: #f4f7d6; }
+        section .table-wrap table tr th, section .table-wrap table tr td {
+          font-family: "Montserrat-Bold";
+          font-size: 22px;
+          text-align: center; }
+        section .table-wrap table tr th {
+          color: #fff; }
+        section .table-wrap table tr td {
+          color: #96b24a;
+          border: 1px solid #96b24a; }
+          section .table-wrap table tr td:first-child {
+            border-left: none; }
+          section .table-wrap table tr td:last-child {
+            border-right: none; }
+        section .table-wrap table tr:last-child td {
+          border-bottom: none; }
+    section .table-wrap .first-table tr td:first-child {
+      font-size: 24px; }
+
+.section-slogan {
+  padding-left: 12%;
+  margin-top: 140px;
+  position: relative; }
+  .section-slogan .slogan-wrap {
+    width: 55%; }
+    .section-slogan .slogan-wrap h1 {
+      font-family: "Montserrat-Bold";
+      font-size: 35px;
+      text-transform: uppercase;
+      line-height: 1.1; }
+    .section-slogan .slogan-wrap p {
+      margin: 50px 0;
+      width: 56%;
+      font-size: 24px;
+      line-height: 1.6; }
+    .section-slogan .slogan-wrap .slogan-contact {
+      width: 53.2%; }
+      .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel {
+        width: 75%;
+        height: 70px;
+        border: 2px solid #4e504b;
+        border-radius: 6.8%/34.3%;
+        margin-bottom: 27px; }
+        .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel img {
+          width: 7.7%;
+          left: 12.3%; }
+        .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel .ua-code {
+          left: 25%;
+          font-size: 18px; }
+        .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel .tel-mask {
+          font-size: 18px; }
+      .section-slogan .slogan-wrap .slogan-contact .send-tel {
+        width: 100%;
+        height: 80px;
+        background-color: #d2732c;
+        border-radius: 4.8%/34.3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        text-transform: uppercase;
+        color: #fff;
+        box-shadow: 3px 7px 10px 1px rgba(103, 96, 94, 0.36), inset 0 0 13px 2px rgba(255, 255, 255, 0.51); }
+
+.section-privilege {
+  padding: 420px 9.8% 0 9.8%; }
+  .section-privilege .privilege-box {
+    text-align: center;
+    width: 22.7%;
+    height: 245px;
+    margin-right: 4.4%;
+    background-color: #f3f7df;
+    border-radius: 30px;
+    box-shadow: 0 7px 35px 14px rgba(103, 96, 94, 0.36); }
+    .section-privilege .privilege-box:last-child {
+      margin-right: 0; }
+    .section-privilege .privilege-box img {
+      width: 28.5%;
+      margin-top: 35px; }
+    .section-privilege .privilege-box p {
+      margin-top: 22px;
+      text-align: center;
+      font-family: "Montserrat-ExtraBold";
+      font-size: 18.4px;
+      text-transform: uppercase;
+      color: #317e00;
+      line-height: 1.3; }
+  .section-privilege .privilege-main h2 {
+    margin: 115px 0 125px; }
+  .section-privilege .privilege-main .privilege h3 {
+    font-family: "Montserrat-ExtraBold";
+    font-size: 17.2px;
+    text-transform: uppercase;
+    color: #317e00;
+    margin-bottom: 10px; }
+  .section-privilege .privilege-main .privilege p {
+    font-size: 18.8px;
+    line-height: 1.6; }
+  .section-privilege .privilege-main .privilege img {
+    margin-bottom: 25px; }
+  .section-privilege .privilege-main .privilege-main-left {
+    width: 27.5%; }
+    .section-privilege .privilege-main .privilege-main-left .privilege {
+      width: 100%;
+      margin-bottom: 60px; }
+  .section-privilege .privilege-main .privilege-main-right {
+    width: 69.3%; }
+    .section-privilege .privilege-main .privilege-main-right .privilege:nth-child(1) {
+      width: 34.2%; }
+    .section-privilege .privilege-main .privilege-main-right .privilege:nth-child(2) {
+      width: 25.8%; }
+    .section-privilege .privilege-main .privilege-main-right .privilege:nth-child(3) {
+      width: 28.1%; }
+    .section-privilege .privilege-main .privilege-main-right .teplitsa-frame {
+      margin-top: 100px; }
+  .section-privilege .privilege-main-mobile {
+    display: none; }
+
+.section-teplitsa-type {
+  position: relative;
+  padding: 0 9.8% 120px 9.8%; }
+  .section-teplitsa-type .leaves1 {
+    width: 19.4%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .section-teplitsa-type .leaves2 {
+    width: 14.6%;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    z-index: 1; }
+  .section-teplitsa-type .teplitsa-type-content h2 {
+    padding: 150px 0 135px; }
+  .section-teplitsa-type .teplitsa-box {
+    width: 30.5%;
+    padding: 4.58% 4.3%;
+    margin-bottom: 55px;
+    border-radius: 14.9%/11.1%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 7px 35px 14px rgba(103, 96, 94, 0.36); }
+    .section-teplitsa-type .teplitsa-box img {
+      width: 100%; }
+    .section-teplitsa-type .teplitsa-box h3 {
+      font-family: "Montserrat-Bold";
+      font-size: 23.2px;
+      text-transform: uppercase;
+      line-height: .9;
+      margin: 50px 0 25px; }
+    .section-teplitsa-type .teplitsa-box .details-link {
+      width: 100%;
+      height: 55px;
+      border-radius: 5.1%/32.7%;
+      overflow: hidden; }
+      .section-teplitsa-type .teplitsa-box .details-link a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: #8bb337;
+        font-size: 18.6px;
+        text-transform: uppercase;
+        color: #fff; }
+
+.section-cost-calc {
+  display: flex;
+  justify-content: center;
+  background: url(../img/cost-calc-back.png) center top no-repeat;
+  background-size: cover;
+  padding-bottom: 105px;
+  position: relative; }
+  .section-cost-calc .leaves3 {
+    width: 15.1%;
+    position: absolute;
+    top: 31.5%;
+    left: 0;
+    z-index: 1; }
+  .section-cost-calc .leaves4 {
+    width: 24.2%;
+    position: absolute;
+    top: -22%;
+    right: .7%;
+    z-index: 1; }
+  .section-cost-calc .leaves5 {
+    width: 11.25%;
+    position: absolute;
+    top: -83%;
+    right: 0; }
+  .section-cost-calc .cost-calc-content {
+    width: 65.1%;
+    z-index: 10; }
+    .section-cost-calc .cost-calc-content h2 {
+      margin: 135px 0 75px;
+      color: #fff; }
+    .section-cost-calc .cost-calc-content p {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 85px;
+      color: #fff;
+      line-height: 1.3; }
+    .section-cost-calc .cost-calc-content .contact-tel {
+      width: 34%;
+      height: 75px;
+      border-radius: 5.9%/33.3%;
+      background-color: #fff; }
+    .section-cost-calc .cost-calc-content .contact-link {
+      width: 30.4%;
+      height: 75px;
+      margin-left: 1.5%;
+      border-radius: 5.9%/33.3%;
+      overflow: hidden;
+      box-shadow: 0 7px 35px 14px rgba(103, 96, 94, 0.36); }
+      .section-cost-calc .cost-calc-content .contact-link .send-tel, .section-cost-calc .cost-calc-content .contact-link .send-dealer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 18.6px;
+        text-transform: uppercase;
+        background-color: #8bb337;
+        color: #fff;
+        font-family: "Montserrat-Bold"; }
+
+.section-our-works {
+  background: url(../img/works-back.png) center bottom no-repeat;
+  background-size: cover; }
+  .section-our-works .our-works-content > h2 {
+    font-size: 35px;
+    padding: 110px 0 105px; }
+  .section-our-works .our-works-content .slider-container {
+    width: 88.54%;
+    margin: 0 auto;
+    padding: 60px 0;
+    background-color: #fff;
+    box-shadow: 0 7px 35px 14px rgba(103, 96, 94, 0.36);
+    border-radius: 30px; }
+  .section-our-works .our-works-content .main-slider {
+    padding: 0 7.1%;
+    position: relative; }
+    .section-our-works .our-works-content .main-slider .slick-track {
+      display: flex;
+      align-items: center; }
+    .section-our-works .our-works-content .main-slider .teplitsa-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .section-our-works .our-works-content .main-slider .teplitsa-slide img {
+        width: 97%; }
+    .section-our-works .our-works-content .main-slider .control {
+      position: absolute;
+      width: 3.5%;
+      height: 100%;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .section-our-works .our-works-content .main-slider .control img {
+        width: 45%; }
+    .section-our-works .our-works-content .main-slider .prev {
+      left: 2%; }
+    .section-our-works .our-works-content .main-slider .next {
+      right: 2%; }
+  .section-our-works .our-works-content .faq-wrap {
+    width: 64%;
+    margin: 0 auto;
+    padding-bottom: 150px; }
+    .section-our-works .our-works-content .faq-wrap h2 {
+      margin: 100px 0 90px;
+      color: #8bb337; }
+    .section-our-works .our-works-content .faq-wrap .faq {
+      width: 100%; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-item {
+      overflow: hidden;
+      background-color: #fff;
+      border-radius: 25px;
+      box-shadow: 0 7px 35px 14px rgba(103, 96, 94, 0.2);
+      margin-bottom: 20px; }
+      .section-our-works .our-works-content .faq-wrap .accordion .accordion-item:last-child {
+        margin-bottom: 0; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-header {
+      position: relative; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-header span {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      right: 3.2%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-header span::before, .section-our-works .our-works-content .faq-wrap .accordion .accordion-header span::after {
+      content: "";
+      position: absolute;
+      display: flex;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 1px;
+      background-color: #8bb337; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-header span::after {
+      left: 0;
+      transform: rotate(90deg); }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-button {
+      font-size: 22px;
+      text-transform: uppercase;
+      padding: 25px 6.1%;
+      background-color: transparent; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-button:not(.collapsed), .section-our-works .our-works-content .faq-wrap .accordion .accordion-button:focus {
+      color: #4c4e49;
+      background-color: transparent;
+      box-shadow: none; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-button::after {
+      display: none; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-body {
+      font-family: "Montserrat-Regular";
+      padding: 0 6.1% 2rem;
+      font-size: 22px; }
+
+.footer-wrap {
+  background: url(../img/footer-back.png) center top no-repeat;
+  background-size: cover; }
+  .footer-wrap footer {
+    width: 67.1%;
+    margin: 0 auto;
+    padding: 92px 0 65px; }
+    .footer-wrap footer .logo-wrap {
+      width: 34.8%; }
+      .footer-wrap footer .logo-wrap .title {
+        color: #fff; }
+      .footer-wrap footer .logo-wrap p {
+        color: #fff; }
+    .footer-wrap footer h3 {
+      font-family: "Montserrat-Bold";
+      font-size: 25px;
+      text-transform: uppercase;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 25px; }
+    .footer-wrap footer .contacts-wrap {
+      width: 29.1%; }
+      .footer-wrap footer .contacts-wrap p {
+        font-family: "Montserrat-Medium";
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 15px; }
+      .footer-wrap footer .contacts-wrap .contact-link a {
+        font-family: "Montserrat-Medium";
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #fff; }
+      .footer-wrap footer .contacts-wrap .contact-link:nth-child(3) {
+        margin-bottom: 7px; }
+      .footer-wrap footer .contacts-wrap .contact-link:last-child {
+        margin-top: 15px; }
+    .footer-wrap footer .info-wrap {
+      width: 19.3%; }
+      .footer-wrap footer .info-wrap ul li {
+        margin-bottom: 14px; }
+        .footer-wrap footer .info-wrap ul li:last-child {
+          margin-bottom: 0; }
+        .footer-wrap footer .info-wrap ul li a {
+          font-family: "Montserrat-Medium";
+          font-size: 18px;
+          text-transform: uppercase;
+          color: #fff; }
+    .footer-wrap footer .footer-text {
+      font-family: "Montserrat-Bold";
+      font-size: 18px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 45px; }
+
+.section-teplitsa {
+  padding: 80px 5.5% 100px 6%; }
+  .section-teplitsa .teplitsa-slider-wrap {
+    width: 32.4%; }
+    .section-teplitsa .teplitsa-slider-wrap h1 {
+      font-size: 30px;
+      font-family: "Montserrat-Bold";
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1;
+      letter-spacing: .12em;
+      margin-bottom: 65px; }
+    .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider-container {
+      width: 100%;
+      padding: 10% 0;
+      background-color: #fff;
+      box-shadow: 0 7px 35px 14px rgba(103, 96, 94, 0.2);
+      border-radius: 50px; }
+    .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider {
+      position: relative;
+      padding: 0 10%; }
+      .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider .slick-track {
+        display: flex;
+        align-items: center; }
+      .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider .teplitsa-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider .teplitsa-slide img {
+          width: 100%; }
+      .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider .control {
+        position: absolute;
+        width: 7.5%;
+        height: 100%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider .control img {
+          width: 45%; }
+      .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider .prev {
+        left: 2%; }
+      .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider .next {
+        right: 2%; }
+    .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider-nav {
+      padding: 0 10%;
+      margin-top: 35px; }
+      .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider-nav .slick-track {
+        display: flex;
+        align-items: center; }
+      .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider-nav .teplitsa-slide {
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider-nav .teplitsa-slide img {
+          width: 97%; }
+  .section-teplitsa .table-wrap table tr td:first-child, .section-teplitsa .table-wrap table tr th:first-child {
+    width: 37.8%; }
+  .section-teplitsa .teplitsa-info-wrap {
+    width: 63.4%; }
+    .section-teplitsa .teplitsa-info-wrap p {
+      width: 90%;
+      font-size: 24px;
+      line-height: 1.6; }
+    .section-teplitsa .teplitsa-info-wrap .price-contact {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      height: 60px;
+      margin: 40px 0; }
+      .section-teplitsa .teplitsa-info-wrap .price-contact .price {
+        width: 24.9%;
+        height: 100%;
+        background-color: #e1e9b2;
+        border-radius: 18px;
+        border: 3px solid #96b24a;
+        font-family: "Montserrat-Bold";
+        font-size: 21px;
+        color: #96b24a;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel {
+        width: 33.2%;
+        height: 100%;
+        background-color: #f4f7d6;
+        border-radius: 18px;
+        border: 3px solid #96b24a; }
+        .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel img {
+          width: 7.5%;
+          left: 13%; }
+        .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel .contact-tel-toggler {
+          left: 22%; }
+        .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel .ua-code {
+          font-size: 18px; }
+        .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel .tel-mask {
+          font-size: 18px; }
+      .section-teplitsa .teplitsa-info-wrap .price-contact .send-order {
+        width: 33.6%;
+        height: 100%;
+        background-color: #d2732c;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 21px;
+        text-transform: uppercase;
+        color: #fff;
+        box-shadow: 3px 7px 10px 1px rgba(103, 96, 94, 0.36), inset 0 0 15px 4px rgba(255, 255, 255, 0.6); }
+    .section-teplitsa .teplitsa-info-wrap .table-wrap table .selected-price:hover {
+      cursor: pointer;
+      background-color: #dee3ae; }
+    .section-teplitsa .teplitsa-info-wrap .tabs-wrap {
+      width: 100%;
+      position: relative;
+      padding-top: 55px; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap input[type="radio"] {
+        display: none; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap .content {
+        display: none;
+        font-size: 16px;
+        border-bottom-left-radius: 22px 18px;
+        border-bottom-right-radius: 22px 18px; }
+        .section-teplitsa .teplitsa-info-wrap .tabs-wrap .content span {
+          font-family: "Montserrat-Bold"; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap #tab-btn-1:checked ~ #content-1,
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap #tab-btn-2:checked ~ #content-2 {
+        display: block;
+        background-color: #f4f7d6;
+        padding: 35px 5.5%;
+        line-height: 1.9; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap #tab-btn-2:checked ~ #content-2 {
+        padding: 25px 3% 25px 4%; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap .list {
+        display: flex; }
+        .section-teplitsa .teplitsa-info-wrap .tabs-wrap .list ul {
+          width: 50%; }
+          .section-teplitsa .teplitsa-info-wrap .tabs-wrap .list ul:first-child {
+            padding-right: 30px; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap label {
+        position: absolute;
+        width: 50%;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        background-color: #96b24a;
+        font-family: "Montserrat-Bold";
+        font-size: 21px;
+        color: #fff;
+        border-top-left-radius: 22px 18px;
+        border-top-right-radius: 22px 18px;
+        transition: color 0.2s ease-in-out, background-color 0.15s ease-in-out;
+        cursor: pointer;
+        top: 1px; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap #tab-btn-1 + label {
+        top: 0;
+        left: 0; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap #tab-btn-2 + label {
+        top: 0;
+        right: 0; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap label:not(:first-of-type) {
+        border-left: none; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap input[type="radio"]:checked + label {
+        border: 2px solid #f4f7d6;
+        border-bottom: none; }
+  .section-teplitsa .teplitsa-privilege-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px; }
+    .section-teplitsa .teplitsa-privilege-wrap .privilege-box {
+      text-align: center;
+      width: 18.2%;
+      height: 220px;
+      background-color: #f3f7df;
+      border-radius: 18px;
+      box-shadow: 0 7px 35px 14px rgba(103, 96, 94, 0.36); }
+      .section-teplitsa .teplitsa-privilege-wrap .privilege-box:last-child {
+        margin-right: 0; }
+      .section-teplitsa .teplitsa-privilege-wrap .privilege-box img {
+        width: 38.7%;
+        margin-top: 10.3%; }
+      .section-teplitsa .teplitsa-privilege-wrap .privilege-box p {
+        margin-top: 10px;
+        text-align: center;
+        font-family: "Montserrat-ExtraBold";
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #96b24a;
+        line-height: 1.3; }
+
+.section-teplitsa-cost-calc {
+  margin-bottom: 200px;
+  background: url(../img/teplitsa-calc-back.png) center top no-repeat; }
+  .section-teplitsa-cost-calc .cost-calc-content h2 {
+    margin-bottom: 60px; }
+  .section-teplitsa-cost-calc .teplitsa-leaves-1 {
+    width: 11.25%;
+    position: absolute;
+    top: -35.5%;
+    right: 0; }
+
+.section-about-page .for-dealers-wrap p span {
+  font-family: "Montserrat-Bold"; }
+
+.section-for-dealers {
+  margin: 131px 0 165px; }
+  .section-for-dealers .for-dealers-wrap {
+    padding: 0 8% 0 12.2%; }
+    .section-for-dealers .for-dealers-wrap h2 {
+      font-size: 28px;
+      text-align: left;
+      margin-bottom: 50px; }
+    .section-for-dealers .for-dealers-wrap p {
+      font-size: 20px;
+      line-height: 1.95;
+      text-transform: uppercase;
+      font-family: "Montserrat-Medium"; }
+    .section-for-dealers .for-dealers-wrap > div:first-child {
+      margin-bottom: 50px; }
+    .section-for-dealers .for-dealers-wrap > div:first-child {
+      width: 62%; }
+
+.section-distributors-form {
+  margin-bottom: 200px; }
+  .section-distributors-form .cost-calc-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12%; }
+    .section-distributors-form .cost-calc-content h2 {
+      font-size: 36px; }
+    .section-distributors-form .cost-calc-content .dealers-form-wrap {
+      height: 75px;
+      justify-content: space-between; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .contact-tel {
+        width: 28%;
+        height: 100%; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .dealer-name-input, .section-distributors-form .cost-calc-content .dealers-form-wrap .mail-input {
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden; }
+        .section-distributors-form .cost-calc-content .dealers-form-wrap .dealer-name-input input, .section-distributors-form .cost-calc-content .dealers-form-wrap .mail-input input {
+          height: 100%;
+          width: 100%;
+          font-size: 22px;
+          padding: 0 2rem; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .dealer-name-input {
+        width: 18%; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .mail-input {
+        width: 27%; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .contact-link {
+        width: 22%;
+        height: 100%;
+        margin-left: 0;
+        border-radius: 20px; }
+        .section-distributors-form .cost-calc-content .dealers-form-wrap .contact-link .send-dealer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          font-size: 18.6px;
+          text-transform: uppercase;
+          background-color: #8bb337;
+          color: #fff;
+          font-family: "Montserrat-Bold"; }
+
+.section-contacts-page {
+  padding: 120px 0 100px; }
+  .section-contacts-page .section-contacts-page-wrap {
+    padding: 0 5.5% 0 12.2%; }
+    .section-contacts-page .section-contacts-page-wrap h2 {
+      font-size: 35px;
+      text-align: left;
+      margin-bottom: 55px; }
+    .section-contacts-page .section-contacts-page-wrap p {
+      font-size: 28px;
+      line-height: 1.4;
+      text-transform: uppercase; }
+    .section-contacts-page .section-contacts-page-wrap p:last-child {
+      margin-top: 50px; }
+    .section-contacts-page .section-contacts-page-wrap p span {
+      font-family: "Montserrat-Bold"; }
+    .section-contacts-page .section-contacts-page-wrap p a {
+      font-family: "Montserrat-Medium";
+      color: #4c4e49; }
+
+.section-contacts-page-calc {
+  margin-bottom: 200px;
+  background: url(../img/teplitsa-calc-back.png) center top no-repeat;
+  background-size: cover; }
+
+.section-delivery-page {
+  padding: 120px 0 90px; }
+  .section-delivery-page .for-dealers-wrap {
+    padding: 0 5.5% 0 12.2%; }
+    .section-delivery-page .for-dealers-wrap > div:first-child {
+      width: 83.5%; }
+    .section-delivery-page .for-dealers-wrap h2 {
+      font-size: 35px;
+      text-align: left;
+      margin-bottom: 55px; }
+    .section-delivery-page .for-dealers-wrap p {
+      font-size: 28px;
+      line-height: 1.4;
+      text-transform: uppercase; }
+    .section-delivery-page .for-dealers-wrap p span {
+      font-family: "Montserrat-Bold"; }
+  .section-delivery-page .for-dealers-wrap div {
+    margin-bottom: 40px; }
+
+.section-delivery-tables {
+  width: 66.1%;
+  margin: 0 auto 195px; }
+  .section-delivery-tables h3 {
+    font-family: "Montserrat-Bold";
+    font-size: 35px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 45px; }
+  .section-delivery-tables .table-wrap {
+    margin-bottom: 75px; }
+    .section-delivery-tables .table-wrap table tr {
+      height: 77px; }
+    .section-delivery-tables .table-wrap table th, .section-delivery-tables .table-wrap table td {
+      width: 50%;
+      font-size: 24px; }
+    .section-delivery-tables .table-wrap table td {
+      font-size: 28px; }
+  .section-delivery-tables > div:last-child .table-wrap {
+    margin-bottom: 0; }
+
+@media (max-width: 1820px) {
+  .wrapper .logo-wrap .logo img {
+    width: 85px; }
+  .wrapper .logo-wrap .title {
+    font-size: 20px; }
+  .wrapper .logo-wrap p {
+    font-size: 15px; }
+  .wrapper .contact-tel img {
+    left: 15%; }
+  .wrapper .contact-tel .ua-code {
+    left: 26%;
+    font-size: 20px; }
+  .wrapper .contact-tel .tel-mask {
+    font-size: 20px; }
+
+  section h2 {
+    font-size: 36px; }
+
+  .header-wrap header .navbar .navbar-collapse ul .nav-item {
+    margin-left: 20px; }
+    .header-wrap header .navbar .navbar-collapse ul .nav-item .nav-link, .header-wrap header .navbar .navbar-collapse ul .nav-item a {
+      font-family: "Montserrat-Bold";
+      text-transform: uppercase;
+      color: #010101;
+      font-size: 16px;
+      padding: 0; }
+  .header-wrap header .navbar .navbar-collapse ul .nav-item:first-child {
+    margin-left: 0; }
+  .header-wrap header .navbar .navbar-collapse ul .nav-item:last-child {
+    margin-left: 40px; }
+    .header-wrap header .navbar .navbar-collapse ul .nav-item:last-child img {
+      width: 22px; }
+
+  .section-slogan {
+    margin-top: 110px; }
+    .section-slogan .slogan-wrap h1 {
+      font-size: 28px; }
+    .section-slogan .slogan-wrap p {
+      font-size: 21px;
+      margin: 45px 0; }
+    .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel {
+      height: 60px; }
+    .section-slogan .slogan-wrap .slogan-contact .send-tel {
+      height: 65px;
+      font-size: 20px; }
+
+  .section-privilege {
+    padding-top: 390px; }
+    .section-privilege .privilege-box {
+      height: 240px; }
+    .section-privilege .privilege-main h2 {
+      margin: 100px 0 90px; }
+    .section-privilege .privilege-main .privilege img {
+      width: 80px; }
+    .section-privilege .privilege-main .privilege h3 {
+      font-size: 16px; }
+    .section-privilege .privilege-main .privilege p {
+      font-size: 17px; }
+    .section-privilege .privilege-main .privilege-main-right .teplitsa-frame {
+      margin-top: 90px; }
+
+  .section-cost-calc .cost-calc-content h2 {
+    margin: 100px 0 65px; }
+  .section-cost-calc .cost-calc-content p {
+    font-size: 26px;
+    margin-bottom: 70px; }
+
+  .section-teplitsa-type .teplitsa-type-content h2 {
+    padding: 110px 0 95px; }
+  .section-teplitsa-type .teplitsa-box h3 {
+    font-size: 21px; }
+
+  .section-our-works .our-works-content > h2 {
+    padding: 95px 0 80px; }
+  .section-our-works .our-works-content .faq-wrap {
+    padding-bottom: 130px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-button {
+      padding: 25px 6.1%; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-button {
+      font-size: 20px; }
+
+  .footer-wrap footer {
+    padding: 80px 0 55px; }
+    .footer-wrap footer h3 {
+      font-size: 22px;
+      margin-bottom: 20px; }
+    .footer-wrap footer .contacts-wrap p {
+      font-size: 16px;
+      margin-bottom: 18px; }
+    .footer-wrap footer .contacts-wrap .contact-link a {
+      font-size: 16px; }
+    .footer-wrap footer .info-wrap ul li a {
+      font-size: 16px; }
+    .footer-wrap footer .footer-text {
+      font-size: 16px;
+      margin-top: 40px; } }
+@media (max-width: 1660px) {
+  .wrapper .logo-wrap .logo {
+    width: 85px;
+    margin-right: 10px; }
+    .wrapper .logo-wrap .logo img {
+      width: 85px; }
+  .wrapper .logo-wrap .title {
+    font-size: 20px; }
+  .wrapper .logo-wrap p {
+    font-size: 14px; }
+  .wrapper .contact-tel img {
+    left: 15%; }
+  .wrapper .contact-tel .ua-code {
+    left: 26%;
+    font-size: 18px; }
+  .wrapper .contact-tel .tel-mask {
+    font-size: 18px; }
+
+  section h2 {
+    font-size: 32px; }
+
+  .header-wrap header .navbar .navbar-collapse ul .nav-item {
+    margin-left: 20px; }
+    .header-wrap header .navbar .navbar-collapse ul .nav-item .nav-link, .header-wrap header .navbar .navbar-collapse ul .nav-item a {
+      font-family: "Montserrat-Bold";
+      text-transform: uppercase;
+      color: #010101;
+      font-size: 15px;
+      padding: 0; }
+  .header-wrap header .navbar .navbar-collapse ul .nav-item:first-child {
+    margin-left: 0; }
+  .header-wrap header .navbar .navbar-collapse ul .nav-item:last-child {
+    margin-left: 40px; }
+    .header-wrap header .navbar .navbar-collapse ul .nav-item:last-child img {
+      width: 22px; }
+
+  .section-slogan {
+    margin-top: 110px; }
+    .section-slogan .slogan-wrap h1 {
+      font-size: 25px; }
+    .section-slogan .slogan-wrap p {
+      font-size: 20px; }
+    .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel {
+      height: 55px; }
+    .section-slogan .slogan-wrap .slogan-contact .send-tel {
+      height: 60px;
+      font-size: 18px; }
+
+  .section-privilege .privilege-box {
+    height: 220px; }
+    .section-privilege .privilege-box p {
+      font-size: 16px; }
+  .section-privilege .privilege-main h2 {
+    margin: 90px 0 85px; }
+  .section-privilege .privilege-main .privilege img {
+    width: 80px; }
+  .section-privilege .privilege-main .privilege h3 {
+    font-size: 16px; }
+  .section-privilege .privilege-main .privilege p {
+    font-size: 16px; }
+
+  .section-cost-calc .cost-calc-content h2 {
+    margin: 90px 0 55px; }
+  .section-cost-calc .cost-calc-content p {
+    font-size: 24px;
+    margin-bottom: 60px; }
+  .section-cost-calc .cost-calc-content .contact-tel {
+    height: 65px; }
+  .section-cost-calc .cost-calc-content .contact-link {
+    height: 65px; }
+
+  .section-teplitsa-type .teplitsa-box h3 {
+    font-size: 18px; }
+
+  .section-our-works .our-works-content > h2 {
+    font-size: 30px;
+    padding: 85px 0 70px; }
+  .section-our-works .our-works-content .faq-wrap {
+    padding-bottom: 110px; }
+    .section-our-works .our-works-content .faq-wrap h2 {
+      margin: 90px 0 80px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-item {
+      margin-bottom: 18px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-button {
+      font-size: 18px;
+      padding: 22px 6.1%; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-body {
+      font-size: 18px; }
+
+  .footer-wrap footer {
+    padding: 70px 0 50px; }
+    .footer-wrap footer h3 {
+      font-size: 20px;
+      margin-bottom: 20px; }
+    .footer-wrap footer .contacts-wrap p {
+      font-size: 14px;
+      margin-bottom: 10px; }
+    .footer-wrap footer .contacts-wrap .contact-link a {
+      font-size: 14px; }
+    .footer-wrap footer .contacts-wrap .contact-link:last-child {
+      margin-top: 10px; }
+    .footer-wrap footer .info-wrap ul li {
+      margin-bottom: 10px; }
+      .footer-wrap footer .info-wrap ul li a {
+        font-size: 14px; }
+    .footer-wrap footer .footer-text {
+      font-size: 14px;
+      margin-top: 30px; } }
+@media (max-width: 1520px) {
+  .wrapper .logo-wrap .logo {
+    width: 75px;
+    margin-right: 10px; }
+    .wrapper .logo-wrap .logo img {
+      width: 75px; }
+  .wrapper .logo-wrap .title {
+    font-size: 14px; }
+  .wrapper .logo-wrap p {
+    font-size: 10.5px; }
+  .wrapper .contact-tel img {
+    left: 15%; }
+  .wrapper .contact-tel .ua-code {
+    left: 26%;
+    font-size: 15px; }
+  .wrapper .contact-tel .tel-mask {
+    font-size: 15px; }
+
+  .header-wrap header .navbar .logo-wrap {
+    width: 24.5%; }
+  .header-wrap header .navbar .navbar-collapse ul .nav-item {
+    margin-left: 20px; }
+    .header-wrap header .navbar .navbar-collapse ul .nav-item .nav-link, .header-wrap header .navbar .navbar-collapse ul .nav-item a {
+      font-family: "Montserrat-Bold";
+      text-transform: uppercase;
+      color: #010101;
+      font-size: 13px;
+      padding: 0; }
+  .header-wrap header .navbar .navbar-collapse ul .nav-item:first-child {
+    margin-left: 0; }
+  .header-wrap header .navbar .navbar-collapse ul .nav-item:last-child {
+    margin-left: 40px; }
+    .header-wrap header .navbar .navbar-collapse ul .nav-item:last-child img {
+      width: 22px; }
+
+  section h2 {
+    font-size: 24px; }
+
+  .section-slogan {
+    margin-top: 100px; }
+    .section-slogan .slogan-wrap h1 {
+      font-size: 23px; }
+    .section-slogan .slogan-wrap p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin: 35px 0; }
+    .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel {
+      height: 42px;
+      border: 1.5px solid #4e504b;
+      margin-bottom: 20px; }
+      .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel .ua-code {
+        margin-top: 1px;
+        font-size: 14px; }
+      .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel .tel-mask {
+        font-size: 14px; }
+    .section-slogan .slogan-wrap .slogan-contact .send-tel {
+      height: 45px;
+      font-size: 14px; }
+
+  .section-privilege {
+    padding-top: 370px; }
+    .section-privilege .privilege-box {
+      height: 175px; }
+      .section-privilege .privilege-box img {
+        margin-top: 27px; }
+      .section-privilege .privilege-box p {
+        font-size: 13px;
+        margin-top: 18px; }
+    .section-privilege .privilege-main h2 {
+      margin-top: 62px;
+      margin-bottom: 80px; }
+    .section-privilege .privilege-main .privilege {
+      margin-bottom: 40px; }
+      .section-privilege .privilege-main .privilege img {
+        width: 55px;
+        margin-bottom: 18px; }
+      .section-privilege .privilege-main .privilege h3 {
+        font-size: 12px;
+        margin-bottom: 5px; }
+      .section-privilege .privilege-main .privilege p {
+        font-size: 14px; }
+    .section-privilege .privilege-main .privilege-main-left .privilege {
+      margin-bottom: 45px; }
+    .section-privilege .privilege-main .privilege-main-right .teplitsa-frame {
+      margin-top: 40px; }
+
+  .section-teplitsa-type {
+    padding-bottom: 75px; }
+    .section-teplitsa-type .teplitsa-type-content h2 {
+      padding: 100px 0 80px; }
+    .section-teplitsa-type .teplitsa-box {
+      margin-bottom: 40px; }
+      .section-teplitsa-type .teplitsa-box h3 {
+        font-size: 15px;
+        margin: 35px 0 20px; }
+      .section-teplitsa-type .teplitsa-box .details-link {
+        height: 40px; }
+        .section-teplitsa-type .teplitsa-box .details-link a {
+          font-size: 14px; }
+
+  .section-cost-calc {
+    padding-bottom: 75px; }
+    .section-cost-calc .cost-calc-content h2 {
+      margin: 95px 0 50px; }
+    .section-cost-calc .cost-calc-content p {
+      font-size: 20px;
+      margin-bottom: 55px; }
+    .section-cost-calc .cost-calc-content .contact-tel {
+      height: 50px; }
+    .section-cost-calc .cost-calc-content .contact-link {
+      height: 50px; }
+      .section-cost-calc .cost-calc-content .contact-link .send-tel, .section-cost-calc .cost-calc-content .contact-link .send-dealer {
+        font-size: 14px; }
+
+  .section-our-works .our-works-content > h2 {
+    font-size: 25px;
+    padding: 70px 0 65px; }
+  .section-our-works .our-works-content .slider-container {
+    padding: 35px 0; }
+  .section-our-works .our-works-content .faq-wrap {
+    padding-bottom: 100px; }
+    .section-our-works .our-works-content .faq-wrap h2 {
+      margin: 70px 0 60px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-item {
+      border-radius: 16px;
+      margin-bottom: 14px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-button {
+      font-size: 14px;
+      padding: 16px 6.1%; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-body {
+      font-size: 14px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-header span {
+      height: 12px;
+      width: 12px; }
+
+  .footer-wrap footer {
+    padding: 53px 0 43px; }
+    .footer-wrap footer h3 {
+      font-size: 16px;
+      margin-bottom: 18px; }
+    .footer-wrap footer .contacts-wrap p {
+      font-size: 12px;
+      margin-bottom: 8px; }
+    .footer-wrap footer .contacts-wrap .contact-link a {
+      font-size: 12px; }
+    .footer-wrap footer .contacts-wrap .contact-link:nth-child(3) {
+      margin-bottom: 0px; }
+    .footer-wrap footer .contacts-wrap .contact-link:last-child {
+      margin-top: 5px; }
+    .footer-wrap footer .info-wrap ul li {
+      margin-bottom: 3px; }
+      .footer-wrap footer .info-wrap ul li a {
+        font-size: 12px; }
+    .footer-wrap footer .footer-text {
+      font-size: 12px;
+      margin-top: 25px; } }
+@media (max-width: 1400px) {
+  .section-privilege {
+    padding-top: 340px; } }
+@media (max-width: 1370px) {
+  .section-privilege {
+    padding-top: 320px; } }
+@media (max-width: 1300px) {
+  .section-privilege {
+    padding-top: 290px; } }
+@media (max-width: 1260px) {
+  .section-privilege {
+    padding-top: 235px; } }
+@media (max-width: 1820px) {
+  section .table-wrap table tr th, section .table-wrap table tr td {
+    font-size: 20px; }
+
+  .section-teplitsa .teplitsa-slider-wrap h1 {
+    font-size: 26px; }
+  .section-teplitsa .teplitsa-info-wrap p {
+    font-size: 21px; }
+  .section-teplitsa .teplitsa-info-wrap .price-contact {
+    height: 55px; }
+    .section-teplitsa .teplitsa-info-wrap .price-contact .price {
+      font-size: 20px; }
+    .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel .ua-code {
+      font-size: 16px; }
+    .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel .tel-mask {
+      font-size: 16px; }
+    .section-teplitsa .teplitsa-info-wrap .price-contact .send-order {
+      font-size: 18px; }
+  .section-teplitsa .teplitsa-privilege-wrap {
+    margin-top: 65px; }
+    .section-teplitsa .teplitsa-privilege-wrap .privilege-box {
+      height: 205px; }
+      .section-teplitsa .teplitsa-privilege-wrap .privilege-box p {
+        font-size: 17px; } }
+@media (max-width: 1600px) {
+  .section-teplitsa {
+    padding: 55px 5.5% 75px 6%; }
+    .section-teplitsa .teplitsa-slider-wrap h1 {
+      font-size: 19px;
+      margin-top: 10px;
+      margin-bottom: 45px; }
+    .section-teplitsa .teplitsa-info-wrap p {
+      font-size: 16px; }
+    .section-teplitsa .teplitsa-info-wrap .price-contact {
+      margin: 30px 0;
+      height: 42px; }
+      .section-teplitsa .teplitsa-info-wrap .price-contact .price {
+        border-radius: 14px;
+        border: 2px solid #96b24a;
+        font-size: 14px; }
+      .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel {
+        border-radius: 14px;
+        border: 2px solid #96b24a; }
+        .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel .ua-code {
+          left: 25%;
+          margin-top: 1px;
+          font-size: 14px; }
+        .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel .tel-mask {
+          font-size: 14px; }
+      .section-teplitsa .teplitsa-info-wrap .price-contact .send-order {
+        border-radius: 14px;
+        font-size: 14px; }
+    .section-teplitsa .teplitsa-info-wrap .tabs-wrap {
+      padding-top: 43px; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap label {
+        height: 43px;
+        font-size: 16px; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap .content {
+        font-size: 12px; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap #tab-btn-1:checked ~ #content-1 {
+        padding: 23px 5.5%; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap #tab-btn-2:checked ~ #content-2 {
+        padding: 18px 3% 18px 4%; }
+    .section-teplitsa .table-wrap {
+      margin-bottom: 25px;
+      border-radius: 25px; }
+      .section-teplitsa .table-wrap table tr {
+        height: 35px; }
+      .section-teplitsa .table-wrap table th, .section-teplitsa .table-wrap table td {
+        font-size: 16px; }
+    .section-teplitsa .teplitsa-privilege-wrap {
+      margin-top: 55px; }
+      .section-teplitsa .teplitsa-privilege-wrap .privilege-box {
+        height: 160px; }
+        .section-teplitsa .teplitsa-privilege-wrap .privilege-box p {
+          font-size: 13px; } }
+@media (max-width: 1820px) {
+  .section-for-dealers {
+    margin: 120px 0 135px; }
+    .section-for-dealers .for-dealers-wrap h2 {
+      font-size: 24px;
+      margin-bottom: 40px; }
+    .section-for-dealers .for-dealers-wrap p {
+      font-size: 18px; }
+
+  .section-delivery-page {
+    padding: 100px 0; }
+    .section-delivery-page .for-dealers-wrap div {
+      margin-bottom: 30px; }
+    .section-delivery-page .for-dealers-wrap h2 {
+      font-size: 28px;
+      margin-bottom: 25px; }
+    .section-delivery-page .for-dealers-wrap p {
+      font-size: 22px; }
+
+  .section-delivery-tables {
+    margin-bottom: 150px; }
+    .section-delivery-tables h3 {
+      font-size: 30px; }
+    .section-delivery-tables .table-wrap table tr {
+      height: 70px; }
+    .section-delivery-tables .table-wrap table th {
+      font-size: 24px; }
+    .section-delivery-tables .table-wrap table td {
+      font-size: 28px; }
+    .section-delivery-tables .table-wrap .first-table tr td:first-child {
+      font-size: 24px; }
+
+  .section-contacts-page {
+    padding: 100px 0 90px; }
+    .section-contacts-page .section-contacts-page-wrap h2 {
+      font-size: 30px;
+      margin-bottom: 40px; }
+    .section-contacts-page .section-contacts-page-wrap p {
+      font-size: 24px; }
+
+  .section-contacts-page-calc {
+    margin-bottom: 170px; }
+
+  .section-distributors-form {
+    margin-bottom: 180px; }
+    .section-distributors-form .cost-calc-content h2 {
+      font-size: 32px; }
+    .section-distributors-form .cost-calc-content .dealers-form-wrap {
+      height: 65px; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .dealer-name-input input, .section-distributors-form .cost-calc-content .dealers-form-wrap .mail-input input {
+        font-size: 21px;
+        padding: 0 1.5rem; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .contact-link .send-dealer {
+        font-size: 17px; } }
+@media (max-width: 1660px) {
+  .section-for-dealers {
+    margin: 85px 0 100px; }
+    .section-for-dealers .for-dealers-wrap > div:first-child {
+      margin-bottom: 30px; }
+    .section-for-dealers .for-dealers-wrap h2 {
+      font-size: 18px;
+      margin-bottom: 30px; }
+    .section-for-dealers .for-dealers-wrap p {
+      font-size: 13px; }
+
+  .section-delivery-page {
+    padding: 80px 0; }
+    .section-delivery-page .for-dealers-wrap div {
+      margin-bottom: 30px; }
+    .section-delivery-page .for-dealers-wrap h2 {
+      font-size: 22px;
+      margin-bottom: 35px; }
+    .section-delivery-page .for-dealers-wrap p {
+      font-size: 17px; }
+
+  .section-delivery-tables {
+    margin-bottom: 110px; }
+    .section-delivery-tables h3 {
+      font-size: 24px;
+      margin-bottom: 35px; }
+    .section-delivery-tables .table-wrap {
+      margin-bottom: 60px; }
+      .section-delivery-tables .table-wrap table tr {
+        height: 50px; }
+      .section-delivery-tables .table-wrap table th {
+        font-size: 16px; }
+      .section-delivery-tables .table-wrap table td {
+        font-size: 20px; }
+      .section-delivery-tables .table-wrap .first-table tr td:first-child {
+        font-size: 16px; }
+
+  .section-contacts-page {
+    padding: 80px 0 70px; }
+    .section-contacts-page .section-contacts-page-wrap h2 {
+      font-size: 24px;
+      margin-bottom: 35px; }
+    .section-contacts-page .section-contacts-page-wrap p {
+      font-size: 16px; }
+    .section-contacts-page .section-contacts-page-wrap p:last-child {
+      margin-top: 30px; }
+
+  .section-contacts-page-calc {
+    margin-bottom: 140px; }
+
+  .section-distributors-form {
+    margin-bottom: 160px; }
+    .section-distributors-form .cost-calc-content h2 {
+      font-size: 28px; }
+    .section-distributors-form .cost-calc-content .dealers-form-wrap {
+      height: 60px; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .dealer-name-input, .section-distributors-form .cost-calc-content .dealers-form-wrap .mail-input {
+        border-radius: 18px; }
+        .section-distributors-form .cost-calc-content .dealers-form-wrap .dealer-name-input input, .section-distributors-form .cost-calc-content .dealers-form-wrap .mail-input input {
+          font-size: 21px;
+          padding: 0 1.5rem; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .contact-link {
+        border-radius: 18px; }
+        .section-distributors-form .cost-calc-content .dealers-form-wrap .contact-link .send-dealer {
+          font-size: 16px; } }
+@media (max-width: 1520px) {
+  .section-distributors-form {
+    margin-bottom: 135px; }
+    .section-distributors-form .cost-calc-content .dealers-form-wrap {
+      height: 55px; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .dealer-name-input, .section-distributors-form .cost-calc-content .dealers-form-wrap .mail-input {
+        border-radius: 18px; }
+        .section-distributors-form .cost-calc-content .dealers-form-wrap .dealer-name-input input, .section-distributors-form .cost-calc-content .dealers-form-wrap .mail-input input {
+          font-size: 16px;
+          padding: 0 1.5rem; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .contact-link {
+        border-radius: 18px; }
+        .section-distributors-form .cost-calc-content .dealers-form-wrap .contact-link .send-dealer {
+          font-size: 15px; } }
+@media (max-width: 576px) {
+  .scroll-header {
+    background-color: #fff;
+    transition: all .2s; }
+
+  .wrapper .logo-wrap .logo {
+    width: auto; }
+    .wrapper .logo-wrap .logo img {
+      width: 40px; }
+  .wrapper .logo-wrap .title {
+    font-size: 9px; }
+  .wrapper .logo-wrap p {
+    font-size: 7px; }
+  .wrapper .contact-tel img {
+    left: 13%; }
+  .wrapper .contact-tel .ua-code {
+    font-size: 13px;
+    left: 26%; }
+  .wrapper .contact-tel .tel-mask {
+    font-size: 13px; }
+  .wrapper .leaves1, .wrapper .leaves2, .wrapper .leaves4 {
+    display: none; }
+
+  .main-page-wrapper {
+    background: url(../img/mobile-main-wrap.png) no-repeat;
+    background-size: 100%; }
+
+  .for-dealers-page-wrapper, .contacts-page-wrapper {
+    background-size: cover;
+    background-position: center top; }
+
+  .delivery-page-wrapper {
+    background: url(../img/delivery-page-back-mobile.png) no-repeat;
+    background-size: cover; }
+
+  .teplitsa-page-wrapper {
+    background-size: cover;
+    background-position: center top; }
+
+  section h2 {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0 auto; }
+
+  .header-wrap {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%; }
+    .header-wrap header {
+      padding: 0; }
+      .header-wrap header .navbar {
+        padding: 25px 20px 20px 25px !important;
+        width: 100%; }
+        .header-wrap header .navbar .logo-wrap {
+          width: 190px; }
+        .header-wrap header .navbar .navbar-collapse {
+          z-index: 10; }
+          .header-wrap header .navbar .navbar-collapse ul {
+            padding-top: 20px; }
+            .header-wrap header .navbar .navbar-collapse ul .nav-item {
+              margin-left: 0; }
+              .header-wrap header .navbar .navbar-collapse ul .nav-item .nav-link {
+                width: 100%;
+                margin-top: 7px;
+                font-size: 12px; }
+              .header-wrap header .navbar .navbar-collapse ul .nav-item:last-child {
+                margin-top: 15px;
+                margin-left: 0; }
+
+  .section-slogan {
+    margin-top: 0;
+    padding-left: 0;
+    padding-top: 130px; }
+    .section-slogan .slogan-wrap {
+      width: 320px;
+      margin: 0 auto; }
+      .section-slogan .slogan-wrap h1 {
+        font-size: 12px;
+        line-height: 1.8;
+        text-align: center; }
+      .section-slogan .slogan-wrap p {
+        width: 85%;
+        font-size: 12px;
+        margin: 0 auto;
+        margin-top: 22px;
+        text-align: center; }
+      .section-slogan .slogan-wrap .slogan-contact {
+        width: 100%; }
+        .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel {
+          width: 270px;
+          height: 40px;
+          border-radius: 15px;
+          margin-top: 27px;
+          border: 1px solid #4e504b; }
+          .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel .ua-code {
+            left: 27%;
+            font-size: 13px;
+            margin-top: 0; }
+          .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel .tel-mask {
+            font-size: 13px;
+            padding-left: 112px; }
+        .section-slogan .slogan-wrap .slogan-contact .send-tel {
+          width: 90%;
+          height: 40px;
+          font-size: 11px;
+          border-radius: 15px; }
+
+  .section-privilege {
+    padding: 200px 25px 0; }
+    .section-privilege > div:first-child {
+      justify-content: space-between !important; }
+    .section-privilege .privilege-box {
+      margin: 0;
+      width: 31%;
+      height: 80px;
+      border-radius: 7px; }
+      .section-privilege .privilege-box img {
+        margin-top: 12px; }
+      .section-privilege .privilege-box p {
+        font-size: 7px;
+        margin-top: 7px; }
+    .section-privilege .privilege-main {
+      display: none; }
+    .section-privilege .privilege-main-mobile {
+      display: block; }
+      .section-privilege .privilege-main-mobile h2 {
+        width: 280px;
+        margin: 45px auto 35px; }
+      .section-privilege .privilege-main-mobile > div {
+        width: 100%;
+        display: flex; }
+      .section-privilege .privilege-main-mobile .privilege {
+        width: 50%;
+        text-align: center;
+        margin-bottom: 20px; }
+        .section-privilege .privilege-main-mobile .privilege img {
+          width: 45px; }
+        .section-privilege .privilege-main-mobile .privilege h3 {
+          font-size: 10px;
+          margin: 16px 0 14px;
+          text-transform: uppercase;
+          font-family: "Montserrat-Bold"; }
+        .section-privilege .privilege-main-mobile .privilege p {
+          width: 100%;
+          font-size: 10.5px;
+          line-height: 1.2; }
+          .section-privilege .privilege-main-mobile .privilege p br {
+            display: none; }
+      .section-privilege .privilege-main-mobile .privilege:first-child {
+        padding-right: 5px; }
+      .section-privilege .privilege-main-mobile .privilege:last-child {
+        padding-left: 5px; }
+      .section-privilege .privilege-main-mobile .teplitsa-frame {
+        display: block;
+        margin-top: 35px; }
+
+  .section-teplitsa-type {
+    padding: 0 20px 20px 20px; }
+    .section-teplitsa-type .teplitsa-type-content h2 {
+      padding: 55px 0 40px; }
+    .section-teplitsa-type .teplitsa-type-content .teplitsa-box {
+      width: 48%;
+      padding: 7.5% 6.3%;
+      border-radius: 25px;
+      margin-bottom: 16px; }
+      .section-teplitsa-type .teplitsa-type-content .teplitsa-box h3 {
+        margin: 18px 0 10px;
+        font-size: 8px;
+        text-align: center; }
+      .section-teplitsa-type .teplitsa-type-content .teplitsa-box .details-link {
+        height: 25px;
+        border-radius: 5px; }
+        .section-teplitsa-type .teplitsa-type-content .teplitsa-box .details-link a {
+          font-size: 8px; }
+
+  .section-cost-calc {
+    padding-bottom: 25px; }
+    .section-cost-calc .cost-calc-content {
+      width: 100%; }
+      .section-cost-calc .cost-calc-content h2 {
+        width: 235px;
+        font-size: 15px;
+        margin: 30px auto 20px; }
+      .section-cost-calc .cost-calc-content p {
+        width: 340px;
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 0 auto;
+        margin-bottom: 20px; }
+        .section-cost-calc .cost-calc-content p br {
+          display: none; }
+      .section-cost-calc .cost-calc-content > div {
+        flex-direction: column;
+        align-items: center; }
+      .section-cost-calc .cost-calc-content .contact-tel {
+        border-radius: 15px;
+        height: 40px;
+        width: 270px; }
+      .section-cost-calc .cost-calc-content .contact-link {
+        border-radius: 15px;
+        height: 40px;
+        width: 270px;
+        margin-left: 0;
+        margin-top: 18px; }
+        .section-cost-calc .cost-calc-content .contact-link .send-tel {
+          font-size: 12px; }
+    .section-cost-calc .leaves3 {
+      width: 25%;
+      top: 63%; }
+    .section-cost-calc .leaves5 {
+      display: none; }
+
+  .section-our-works .our-works-content > h2 {
+    font-size: 13px;
+    padding: 30px 0 25px; }
+  .section-our-works .our-works-content .slider-container {
+    width: auto;
+    margin: 0 25px;
+    padding: 30px 0;
+    border-radius: 20px; }
+  .section-our-works .our-works-content .main-slider {
+    padding: 0 30px; }
+    .section-our-works .our-works-content .main-slider .control {
+      width: 8%; }
+    .section-our-works .our-works-content .main-slider .prev {
+      left: 1%; }
+    .section-our-works .our-works-content .main-slider .next {
+      right: 1%; }
+  .section-our-works .our-works-content .faq-wrap {
+    width: auto;
+    padding: 0 20px 30px; }
+    .section-our-works .our-works-content .faq-wrap h2 {
+      font-size: 15px;
+      margin: 45px auto 30px;
+      width: 240px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-item {
+      border-radius: 8px;
+      margin-bottom: 8px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-header span {
+      width: 12px;
+      height: 12px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-button {
+      font-family: "Montserrat-Medium";
+      font-size: 11px;
+      line-height: 1.4;
+      padding: 15px 9% 15px 6%; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-body {
+      font-size: 12px;
+      padding-bottom: 20px; }
+
+  .footer-wrap footer {
+    width: 100%;
+    padding: 30px 20px; }
+    .footer-wrap footer > div:first-child {
+      flex-wrap: wrap; }
+    .footer-wrap footer .logo-wrap {
+      width: 100%;
+      margin-bottom: 35px;
+      order: 1; }
+      .footer-wrap footer .logo-wrap p {
+        width: 140px; }
+    .footer-wrap footer .contacts-wrap {
+      width: 55%;
+      order: 3; }
+      .footer-wrap footer .contacts-wrap p {
+        font-size: 9px;
+        margin-bottom: 7px; }
+      .footer-wrap footer .contacts-wrap .contact-link {
+        display: flex; }
+        .footer-wrap footer .contacts-wrap .contact-link a {
+          font-size: 9px; }
+    .footer-wrap footer .info-wrap {
+      width: auto;
+      order: 2; }
+      .footer-wrap footer .info-wrap ul li {
+        display: flex;
+        margin-bottom: 4px; }
+        .footer-wrap footer .info-wrap ul li a {
+          font-size: 10px; }
+    .footer-wrap footer h3 {
+      font-size: 12px;
+      margin-bottom: 9px; }
+    .footer-wrap footer .footer-text {
+      font-size: 8px;
+      margin-top: 22px; }
+
+  .section-for-dealers {
+    padding: 100px 0 40px;
+    margin: 0; }
+    .section-for-dealers .for-dealers-wrap {
+      padding: 0 6%; }
+      .section-for-dealers .for-dealers-wrap > div:first-child {
+        width: 100%; }
+      .section-for-dealers .for-dealers-wrap h2 {
+        font-size: 12px;
+        margin-bottom: 15px; }
+      .section-for-dealers .for-dealers-wrap p {
+        font-size: 10px; }
+
+  .section-contacts-page {
+    padding: 100px 0 40px; }
+    .section-contacts-page .section-contacts-page-wrap {
+      padding: 0 6%; }
+      .section-contacts-page .section-contacts-page-wrap h2 {
+        font-size: 14px;
+        margin-bottom: 15px; }
+      .section-contacts-page .section-contacts-page-wrap p {
+        font-size: 9px; }
+
+  .section-distributors-form, .section-contacts-page-calc {
+    margin-bottom: 80px; }
+
+  .section-distributors-form .cost-calc-content {
+    padding: 0; }
+    .section-distributors-form .cost-calc-content h2 {
+      width: 90%;
+      font-size: 15px;
+      margin: 30px auto 20px; }
+    .section-distributors-form .cost-calc-content .dealers-form-wrap {
+      height: auto; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .contact-tel {
+        height: 40px;
+        width: 270px; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .dealer-name-input, .section-distributors-form .cost-calc-content .dealers-form-wrap .mail-input {
+        height: 40px;
+        width: 270px;
+        margin-top: 18px;
+        border-radius: 15px; }
+        .section-distributors-form .cost-calc-content .dealers-form-wrap .dealer-name-input input, .section-distributors-form .cost-calc-content .dealers-form-wrap .mail-input input {
+          font-size: 13px;
+          padding: 0 1rem; }
+      .section-distributors-form .cost-calc-content .dealers-form-wrap .contact-link {
+        height: 40px;
+        width: 270px;
+        border-radius: 15px; }
+        .section-distributors-form .cost-calc-content .dealers-form-wrap .contact-link .send-dealer {
+          font-size: 12px; }
+
+  .section-delivery-page {
+    padding: 100px 0 30px; }
+    .section-delivery-page .for-dealers-wrap {
+      padding: 0 6%; }
+      .section-delivery-page .for-dealers-wrap > div:first-child {
+        width: 100%; }
+      .section-delivery-page .for-dealers-wrap div {
+        margin-bottom: 15px; }
+      .section-delivery-page .for-dealers-wrap h2 {
+        font-size: 12px;
+        margin-bottom: 15px; }
+      .section-delivery-page .for-dealers-wrap p {
+        font-size: 10px; }
+
+  .section-delivery-tables {
+    width: 100%;
+    padding: 0 30px;
+    margin: 30px 0 40px; }
+    .section-delivery-tables h3 {
+      font-size: 12px;
+      margin-bottom: 22px; }
+    .section-delivery-tables .table-wrap {
+      margin-bottom: 27px;
+      border-radius: 18px; }
+      .section-delivery-tables .table-wrap table tr {
+        height: 30px; }
+      .section-delivery-tables .table-wrap table th {
+        font-size: 10px; }
+      .section-delivery-tables .table-wrap table td {
+        font-size: 14px; }
+      .section-delivery-tables .table-wrap .first-table tr td:first-child {
+        font-size: 10px; }
+
+  .section-teplitsa {
+    padding: 120px 6% 40px; }
+    .section-teplitsa > div:first-child {
+      flex-direction: column;
+      justify-content: left; }
+    .section-teplitsa .teplitsa-slider-wrap {
+      width: 100%; }
+      .section-teplitsa .teplitsa-slider-wrap h1 {
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-size: 16px; }
+      .section-teplitsa .teplitsa-slider-wrap .teplitsa-slider-container {
+        width: auto;
+        padding: 30px 0;
+        border-radius: 20px; }
+      .section-teplitsa .teplitsa-slider-wrap .main-slider {
+        padding: 0 30px; }
+        .section-teplitsa .teplitsa-slider-wrap .main-slider .control {
+          width: 8%; }
+    .section-teplitsa .teplitsa-info-wrap {
+      width: 100%;
+      margin-top: 25px; }
+      .section-teplitsa .teplitsa-info-wrap p {
+        width: 100%;
+        font-size: 13px;
+        line-height: 1.5;
+        padding: 0 10px; }
+      .section-teplitsa .teplitsa-info-wrap .price-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 30px 0 15px; }
+        .section-teplitsa .teplitsa-info-wrap .price-contact .price {
+          order: 4;
+          width: 120px;
+          height: 35px;
+          margin-top: 30px; }
+        .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel {
+          order: 1;
+          height: 35px;
+          width: 200px; }
+          .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel img {
+            left: 10%; }
+          .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel .ua-code {
+            font-size: 12px;
+            left: 22%; }
+          .section-teplitsa .teplitsa-info-wrap .price-contact .contact-tel .tel-mask {
+            font-size: 12px; }
+        .section-teplitsa .teplitsa-info-wrap .price-contact .send-order {
+          order: 3;
+          height: 35px;
+          width: 210px;
+          margin-top: 15px; }
+        .section-teplitsa .teplitsa-info-wrap .price-contact .order-form-error {
+          order: 2; }
+      .section-teplitsa .teplitsa-info-wrap .tabs-wrap {
+        padding-top: 35px;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px; }
+        .section-teplitsa .teplitsa-info-wrap .tabs-wrap label {
+          height: 35px;
+          font-size: 13px;
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px; }
+        .section-teplitsa .teplitsa-info-wrap .tabs-wrap .list {
+          flex-direction: column; }
+          .section-teplitsa .teplitsa-info-wrap .tabs-wrap .list ul {
+            width: 100%; }
+            .section-teplitsa .teplitsa-info-wrap .tabs-wrap .list ul li {
+              font-size: 12px; }
+    .section-teplitsa .table-wrap {
+      border-radius: 16px;
+      margin-bottom: 30px; }
+      .section-teplitsa .table-wrap table th, .section-teplitsa .table-wrap table td {
+        font-size: 12px; }
+    .section-teplitsa .teplitsa-privilege-wrap {
+      width: 100%;
+      flex-wrap: wrap; }
+      .section-teplitsa .teplitsa-privilege-wrap .privilege-box {
+        width: 48%;
+        height: 120px;
+        margin-bottom: 15px;
+        flex-wrap: wrap; }
+        .section-teplitsa .teplitsa-privilege-wrap .privilege-box img {
+          width: 32%; }
+        .section-teplitsa .teplitsa-privilege-wrap .privilege-box p {
+          font-size: 11px; }
+        .section-teplitsa .teplitsa-privilege-wrap .privilege-box:last-child {
+          margin: 0 auto; }
+
+  .section-teplitsa-cost-calc {
+    margin-bottom: 80px; } }
+@media (max-width: 410px) {
+  .section-privilege {
+    padding-top: 180px; } }
+@media (max-width: 400px) {
+  .section-slogan {
+    padding-top: 110px; }
+    .section-slogan .slogan-wrap .slogan-contact .contact-tel {
+      width: 255px; }
+    .section-slogan .slogan-wrap .slogan-contact .send-tel {
+      width: 85%; } }
+@media (max-width: 390px) {
+  .section-privilege {
+    padding-top: 140px; } }
+@media (max-width: 360px) {
+  .wrapper .contact-tel img {
+    left: 12%; }
+  .wrapper .contact-tel .ua-code {
+    font-size: 12px;
+    left: 26%; }
+  .wrapper .contact-tel .tel-mask {
+    font-size: 12px; }
+
+  section h2 {
+    font-size: 11px; }
+
+  .section-slogan {
+    padding-top: 110px; }
+    .section-slogan .slogan-wrap {
+      width: 280px; }
+      .section-slogan .slogan-wrap h1 {
+        font-size: 10px;
+        line-height: 1.8;
+        text-align: center; }
+      .section-slogan .slogan-wrap p {
+        font-size: 11px;
+        margin-top: 18px; }
+      .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel {
+        width: 250px;
+        margin-top: 30px;
+        height: 38px; }
+        .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel img {
+          left: 12%; }
+        .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel .ua-code {
+          left: 27%;
+          font-size: 12px; }
+        .section-slogan .slogan-wrap .slogan-contact .slogan-contact-tel .tel-mask {
+          padding-left: 105px;
+          font-size: 12px; }
+      .section-slogan .slogan-wrap .slogan-contact .send-tel {
+        width: 250px;
+        height: 38px;
+        font-size: 10px; }
+
+  .section-privilege {
+    padding: 150px 20px 0; }
+    .section-privilege .privilege-box {
+      height: 68px; }
+      .section-privilege .privilege-box img {
+        margin-top: 9px; }
+      .section-privilege .privilege-box p {
+        font-size: 6px; }
+    .section-privilege .privilege-main {
+      display: none; }
+    .section-privilege .privilege-main-mobile {
+      display: block; }
+      .section-privilege .privilege-main-mobile h2 {
+        width: 230px;
+        margin: 30px auto 25px; }
+      .section-privilege .privilege-main-mobile .privilege {
+        margin-bottom: 15px; }
+        .section-privilege .privilege-main-mobile .privilege img {
+          width: 35px; }
+        .section-privilege .privilege-main-mobile .privilege h3 {
+          font-size: 9px;
+          margin: 15px 0 10px; }
+      .section-privilege .privilege-main-mobile .teplitsa-frame {
+        margin-top: 30px; }
+
+  .section-teplitsa-type .teplitsa-type-content h2 {
+    padding: 40px 0 35px; }
+  .section-teplitsa-type .teplitsa-type-content .teplitsa-box h3 {
+    margin: 15px 0 7px;
+    font-size: 7px; }
+  .section-teplitsa-type .teplitsa-type-content .teplitsa-box .details-link {
+    height: 20px;
+    border-radius: 5px; }
+    .section-teplitsa-type .teplitsa-type-content .teplitsa-box .details-link a {
+      font-size: 6px; }
+
+  .section-cost-calc {
+    padding-bottom: 20px; }
+    .section-cost-calc .cost-calc-content h2 {
+      width: 220px;
+      font-size: 14px;
+      margin: 20px auto 16px; }
+    .section-cost-calc .cost-calc-content p {
+      font-size: 11px;
+      width: 275px;
+      margin-bottom: 15px; }
+    .section-cost-calc .cost-calc-content .contact-tel {
+      width: 250px;
+      height: 38px; }
+    .section-cost-calc .cost-calc-content .contact-link {
+      width: 250px;
+      height: 38px;
+      margin-top: 13px; }
+      .section-cost-calc .cost-calc-content .contact-link .send-tel {
+        font-size: 11px; }
+
+  .section-distributors-form, .section-contacts-page-calc {
+    margin-bottom: 65px; }
+
+  .section-distributors-form .cost-calc-content h2 {
+    width: 90%;
+    font-size: 14px;
+    margin: 20px auto 16px; }
+  .section-distributors-form .cost-calc-content .dealers-form-wrap .contact-tel {
+    width: 250px;
+    height: 38px; }
+  .section-distributors-form .cost-calc-content .dealers-form-wrap .dealer-name-input, .section-distributors-form .cost-calc-content .dealers-form-wrap .mail-input {
+    width: 250px;
+    height: 38px;
+    margin-top: 14px; }
+    .section-distributors-form .cost-calc-content .dealers-form-wrap .dealer-name-input input, .section-distributors-form .cost-calc-content .dealers-form-wrap .mail-input input {
+      font-size: 12px; }
+  .section-distributors-form .cost-calc-content .dealers-form-wrap .contact-link {
+    width: 250px;
+    height: 38px; }
+
+  .section-our-works .our-works-content > h2 {
+    font-size: 11px;
+    padding: 25px 0 20px; }
+  .section-our-works .our-works-content .slider-container {
+    margin: 0 25px; }
+  .section-our-works .our-works-content .faq-wrap {
+    padding: 0 20px 25px; }
+    .section-our-works .our-works-content .faq-wrap h2 {
+      font-size: 14px;
+      margin: 35px auto 20px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-item {
+      margin-bottom: 8px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-header span {
+      width: 10px;
+      height: 10px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-button {
+      font-size: 10px; }
+    .section-our-works .our-works-content .faq-wrap .accordion .accordion-body {
+      font-size: 11px; }
+
+  .footer-wrap footer {
+    padding: 22px 20px; }
+    .footer-wrap footer .logo-wrap {
+      margin-bottom: 35px; }
+    .footer-wrap footer .contacts-wrap p {
+      font-size: 8px;
+      margin-bottom: 5px; }
+    .footer-wrap footer .contacts-wrap .contact-link {
+      display: flex; }
+      .footer-wrap footer .contacts-wrap .contact-link a {
+        font-size: 8px; }
+    .footer-wrap footer .info-wrap ul li {
+      margin-bottom: 3px; }
+      .footer-wrap footer .info-wrap ul li a {
+        font-size: 8px; }
+    .footer-wrap footer h3 {
+      font-size: 10px;
+      margin-bottom: 7px; }
+
+  .section-for-dealers .for-dealers-wrap p {
+    font-size: 9px; }
+
+  .section-contacts-page .section-contacts-page-wrap p {
+    font-size: 8px; }
+    .section-contacts-page .section-contacts-page-wrap p:last-child {
+      margin-top: 22px; }
+
+  .section-delivery-page .for-dealers-wrap p {
+    font-size: 9px; }
+
+  .section-delivery-tables {
+    margin-top: 0; }
+    .section-delivery-tables .table-wrap table tr td {
+      font-size: 13px; }
+
+  .section-teplitsa .teplitsa-info-wrap p {
+    font-size: 12px; }
+  .section-teplitsa .teplitsa-info-wrap .tabs-wrap label {
+    font-size: 12px; }
+  .section-teplitsa .teplitsa-info-wrap .tabs-wrap .list ul li {
+    font-size: 11px; }
+  .section-teplitsa .table-wrap {
+    border-radius: 16px; }
+    .section-teplitsa .table-wrap table th, .section-teplitsa .table-wrap table td {
+      font-size: 10px; }
+  .section-teplitsa .teplitsa-privilege-wrap .privilege-box {
+    height: 110px; }
+    .section-teplitsa .teplitsa-privilege-wrap .privilege-box img {
+      width: 32%; }
+    .section-teplitsa .teplitsa-privilege-wrap .privilege-box p {
+      font-size: 11px; } }
+@media (max-width: 330px) {
+  .section-privilege {
+    padding-top: 105px; }
+
+  .section-distributors-form, .section-contacts-page-calc {
+    margin-bottom: 45px; } }
+
+/*# sourceMappingURL=style.css.map */
